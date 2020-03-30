@@ -1,0 +1,39 @@
+<form id="order_container" class="box">
+    <div class="field">
+        <label class="label">Phone</label>
+        <div class="control has-icons-left has-icons-right">
+            <input title="Phone number should contain atleast 10 digits, starting with 6,7,8,9" pattern="[6789][0-9]{9}"
+                maxlength="10" id="order_phone" class="input" type="text" placeholder="Phone number" required>
+            <span class="icon is-small is-left">
+                <i class="fas fa-phone"></i>
+            </span>
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">Email</label>
+        <div class="control has-icons-left has-icons-right">
+            <input id="order_email" class="input" type="email" placeholder="Email" required>
+            <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+            </span>
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">Quantity</label>
+        <div class="control has-icons-left ">
+            <input id="order_quantity" class="input" type="number" placeholder="Quantity" value="1" required>
+            <span class="icon is-small is-left">
+                <i class="fas fa-boxes"></i>
+            </span>
+        </div>
+    </div>
+    <div class="field is-grouped">
+        <div class="control">
+            <button type="submit" id="order_submit" class="button is-link">Submit</button>
+        </div>
+        <div class="control">
+            <button id="order_cancel" class="button is-link is-light">Cancel</button>
+        </div>
+    </div>
+
+</form>

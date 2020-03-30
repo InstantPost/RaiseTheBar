@@ -1,13 +1,13 @@
 import { id } from "../selectors";
 
-export function OpenModal() {
+export function OpenModal(html) {
   id("modal").classList += " is-active";
+  id("modal-content").innerHTML = html;
 }
 
-id("modal-close").addEventListener("click", () => {
+id("modal-close").addEventListener("click", CloseModal);
+id("modal-background").addEventListener("click", CloseModal);
+export function CloseModal() {
+  id("modal-content").innerHTML = "";
   id("modal").classList.remove("is-active");
-});
-id("modal-background").addEventListener("click", () => {
-  id("modal").classList.remove("is-active");
-});
-export function CloseModal() {}
+}

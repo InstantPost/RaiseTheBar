@@ -5,6 +5,8 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const dotenv = require("dotenv");
 const Webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const workboxPlugin = require("workbox-webpack-plugin");
+const WebpackPwaManifest = require("webpack-pwa-manifest");
 
 function getEnv() {
   console.log(process.env.NODE_ENV);
@@ -37,6 +39,30 @@ module.exports = {
     getEnv(),
     new MiniCssExtractPlugin({
       filename: "css/main.css"
+    }),
+    new WebpackPwaManifest({
+      name: "My Progressive Web App",
+      short_name: "MyPWA",
+      description: "My awesome Progressive Web App!",
+      background_color: "#ffffff",
+      crossorigin: "use-credentials", //can be null, use-credentials or anonymous
+      icons: [
+        {
+          src: path.resolve("src/assets/mask.png"),
+          sizes: [96, 128, 192, 256, 384, 512] // multiple sizes
+        }
+      ]
+    }),
+    new workboxPlugin.InjectManifest({
+      swDest: "sw.js",
+      swSrc: "./src/sw.js"
+      // exclude: [
+      //   /\.map$/,
+      //   /manifest$/,
+      //   /\.htaccess$/,
+      //   /service-worker\.js$/,
+      //   /sw\.js$/
+      // ]
     })
   ],
   mode: "development",
