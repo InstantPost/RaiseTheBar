@@ -27,10 +27,7 @@ module.exports = {
     // .[contentHash].
     filename: `bundle${
       process.env.NODE_ENV == "production" ? ".[contentHash]." : "."
-    }js`,
-    library: "ipapi",
-    libraryTarget: "window",
-    umdNamedDefine: true
+    }js`
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -40,12 +37,12 @@ module.exports = {
     }),
     getEnv(),
     new MiniCssExtractPlugin({
-      filename: "css/main.css"
+      filename: "css/main.[contentHash].css"
     }),
     new WebpackPwaManifest({
-      name: "My Progressive Web App",
-      short_name: "MyPWA",
-      description: "My awesome Progressive Web App!",
+      name: "",
+      short_name: "",
+      description: "",
       background_color: "#ffffff",
       crossorigin: "use-credentials", //can be null, use-credentials or anonymous
       icons: [
