@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const dotenv = require("dotenv");
 const Webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const workboxPlugin = require("workbox-webpack-plugin");
+
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 
 function getEnv() {
