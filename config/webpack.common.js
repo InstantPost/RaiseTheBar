@@ -25,7 +25,9 @@ module.exports = {
   output: {
     path: path.join(__dirname, "../dist"),
     // .[contentHash].
-    filename: `bundle${process.env.NODE_ENV == "production" ? "." : "."}js`,
+    filename: `bundle${
+      process.env.NODE_ENV == "production" ? ".[contentHash]." : "."
+    }js`,
     library: "ipapi",
     libraryTarget: "window",
     umdNamedDefine: true
