@@ -17,7 +17,12 @@
 </head>
 
 <body>
-
+    <div id="modal" class="modal">
+        <div id="modal-background" class="modal-background"></div>
+        <div id="modal-content" class="modal-content">
+        </div>
+        <button id="modal-close" class="modal-close is-large" aria-label="close"></button>
+    </div>
     <div class="section transparent is-paddingless">
         <div id="main" class="section transparent">
             <div class="container has-background-white">
@@ -38,8 +43,7 @@
                     </nav> -->
                     <nav class="navbar">
                         <div class="navbar-brand shadowless">
-                            <a class="navbar-item " href="#">
-                            </a>
+
                             <span class="navbar-burger burger is-centered" data-target="navMenu">
                                 <span></span>
                                 <span></span>
@@ -54,9 +58,10 @@
                                     </a><a data-href="#clusters" class=" navbar-item is-white has-text-grey">
                                         Clusters
                                     </a>
-                                    <button id="volunteer_init" class="button is-primary is-light is-rounded ">
-                                        Be a volunteer
-                                    </button>
+                                    <a data-href="#volunteers" class=" navbar-item is-white has-text-grey">
+                                        Volunteers
+                                    </a>
+
                                 </div>
                             </div>
                         </div>
@@ -66,14 +71,8 @@
             <div class="content-container">
 
 
-                <div id="home" class="hero-body tab active">
-                    <div id="modal" class="modal">
-                        <div id="modal-background" class="modal-background"></div>
-                        <div id="modal-content" class="modal-content">
-                            <!-- Any other Bulma elements you want -->
-                        </div>
-                        <button id="modal-close" class="modal-close is-large" aria-label="close"></button>
-                    </div>
+                <div id="home" class="hero-body tab">
+
                     <div class="container has-text-centered">
                         <div class="columns is-vcentered">
                             <div class="column is-half  1">
@@ -81,9 +80,7 @@
                                     Face Shield
                                 </h1>
                                 <h2 class="subtitle is-4 has-text-left">
-                                    A prototype face shield that we developed. In three days, we went through dozens of
-                                    prototypes and two verifications
-                                    with the Czech Ministry of Health.
+
                                 </h2>
                                 <br>
                                 <p class="has-text-centered  has-text-left">
@@ -103,6 +100,32 @@
                 <div class="tab" id="clusters">
                     Test
                 </div>
+                <div class="tab active" id="volunteers">
+                    <br>
+                    <div id="vol_prompt" class="volunteer-btn-container notification is-primary is-light">
+                        <span class="title is-5">
+                            Involve yourself in this cause!
+                        </span>
+                        <button id="volunteer_init" class="">
+                            Be a volunteer
+                        </button>
+                        <button id="remove_vol_prompt" class="delete"></button>
+                    </div>
+                    <h1 class="title">Volunteers</h1>
+
+                    <div class="table-container">
+                        <table class="table is-hoverable is-bordered is-striped  is-hoverable is-fullwidth">
+                            <thead>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>City</th>
+                            </thead>
+                            <tbody id="volunteers_data"></tbody>
+                        </table>
+                    </div>
+
+                </div>
             </div>
         </div>
         <footer class="footer is-paddingless shadowless">
@@ -111,7 +134,7 @@
                     <p class="is-4">
                         <strong class="name logo has-text-grey">
                             An Initiative by</strong>
-                        <span class="name logo has-text-black is-bold"><a href="https://michaelandreuzza.com"
+                        <span class="name logo has-text-black is-bold"><a target="_blank" href="https://instantpost.in"
                                 class="has-text-grey logo">InstantPost &trade;</a></span>
                     </p>
                 </div>

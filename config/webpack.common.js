@@ -52,17 +52,6 @@ module.exports = {
           sizes: [96, 128, 192, 256, 384, 512] // multiple sizes
         }
       ]
-    }),
-    new workboxPlugin.InjectManifest({
-      swDest: "sw.js",
-      swSrc: "./src/sw.js"
-      // exclude: [
-      //   /\.map$/,
-      //   /manifest$/,
-      //   /\.htaccess$/,
-      //   /service-worker\.js$/,
-      //   /sw\.js$/
-      // ]
     })
   ],
   mode: "development",

@@ -3,7 +3,9 @@ import * as nav from "./nav";
 import * as img from "./img";
 import * as listener from "./listeners";
 import { GenericPost } from "./network";
+import { LoadVolunteers } from "./Volunteers";
 window.onload = e => {
+  LoadVolunteers();
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       position => {

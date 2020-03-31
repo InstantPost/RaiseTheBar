@@ -13,6 +13,9 @@ module.exports = merge(common, {
     // new Webpack.DefinePlugin({
     //   "process.env.NODE_ENV": JSON.stringify("production")
     // }),
-    new Webpack.optimize.ModuleConcatenationPlugin()
+    new Webpack.optimize.ModuleConcatenationPlugin(),
+    new workboxPlugin.InjectManifest({
+      swSrc: "./src/sw.js"
+    })
   ]
 });

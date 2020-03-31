@@ -3,6 +3,7 @@ importScripts(
 );
 import { precacheAndRoute } from "workbox-precaching";
 if (workbox) {
+  console.log("hey");
   workbox.core.skipWaiting();
   workbox.core.clientsClaim();
   precacheAndRoute(self.__WB_MANIFEST);

@@ -30,5 +30,21 @@ input[type="number"]::-webkit-outer-spin-button {
   display: block;
 }
 .content-container {
-  min-height: 70vh;
+  min-height: 68vh;
+}
+.public-perms {
+  text-align: right;
+}
+#vol_prompt {
+  text-align: center;
+}
+#volunteer_init {
+  background: none;
+  border: none;
+  color: darkcyan;
+  cursor: pointer;
+  font-weight: bold;
+}
+#volunteer_init:hover {
+  text-decoration: underline;
 }
