@@ -56,16 +56,20 @@ module.exports = {
   mode: "development",
   module: {
     rules: [
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"]
-      },
+      // {
+      //   test: /\.css$/,
+      //   use: ["style-loader", "css-loader"]
+      // },
       {
         test: /\.scss$/,
         use: [
+          "style-loader",
           MiniCssExtractPlugin.loader,
           {
             loader: "css-loader"
+            // options: {
+            //   name: "css/main.[contentHash].css"
+            // }
           },
           {
             loader: "sass-loader",
