@@ -1,7 +1,7 @@
 import { id, cls } from "../selectors";
 import { urlify } from "../utils/urlify";
-export function LoadCommodities() {
-  fetch(process.env.BACKEND_URI + "commodity/")
+export function LoadPrinters() {
+  fetch(process.env.BACKEND_URI + "printer/")
     .then(res => {
       if (res.status == 200) {
         return res.json();
@@ -46,7 +46,7 @@ export function LoadCommodities() {
             ImgsContainer.appendChild(div);
           }
         }
-        id("commodities_data").appendChild(row);
+        id("printers_data").appendChild(row);
       }
     })
     .catch(error => {

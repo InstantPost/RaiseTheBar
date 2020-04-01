@@ -2,7 +2,7 @@ import { id } from "../selectors";
 import { OpenModal } from "../Modal";
 import { GenericPost } from "../network";
 import FormHTML from "./index.html";
-export function commodities() {
+export function printers() {
   OpenModal(FormHTML);
   id("form_container").addEventListener("submit", event => {
     event.preventDefault();
@@ -39,7 +39,7 @@ export function commodities() {
     if (id("form_container").classList.contains("submitted")) return;
     id("form_container").classList.add("submitted");
     id("submit").classList += " is-loading";
-    fetch(process.env.BACKEND_URI + "commodity/", {
+    fetch(process.env.BACKEND_URI + "printer/", {
       method: "post",
       body: form
     }).then(response => {

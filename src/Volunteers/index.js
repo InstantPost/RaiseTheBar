@@ -1,6 +1,6 @@
 import { id, cls } from "../selectors";
 export function LoadVolunteers() {
-  fetch(process.env.BACKEND_URI + "volunteer")
+  fetch(process.env.BACKEND_URI + "volunteer/")
     .then(res => {
       if (res.status == 200) {
         return res.json();

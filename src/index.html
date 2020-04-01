@@ -30,7 +30,6 @@
 
                     <nav class="navbar">
                         <div class="navbar-brand shadowless">
-
                             <span class="navbar-burger burger is-centered" data-target="navMenu">
                                 <span></span>
                                 <span></span>
@@ -42,7 +41,14 @@
                                 <div class="navbar-item">
                                     <a data-href="#home" class=" navbar-item is-white has-text-grey">
                                         Home
-                                    </a><a data-href="#commodities" class=" navbar-item is-white has-text-grey">
+                                    </a>
+                                    <a data-href="#doctors" class=" navbar-item is-white has-text-grey">
+                                        Doctors
+                                    </a>
+                                    <a data-href="#printers" class=" navbar-item is-white has-text-grey">
+                                        Printers
+                                    </a>
+                                    <a data-href="#commodities" class=" navbar-item is-white has-text-grey">
                                         Commodities
                                     </a>
                                     <a data-href="#volunteers" class=" navbar-item is-white has-text-grey">
@@ -79,7 +85,49 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab active" id="commodities">
+                <div class="tab active" id="doctors">
+                    <div class="title is-3">Doctors</div>
+                    <div class="table-container obj_table">
+                        <table class="table is-striped is-hoverable is-fullwidth">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>City</th>
+                                    <th>Description</th>
+                                    <th>Images</th>
+                                </tr>
+                            </thead>
+                            <tbody id="doctors_data"></tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <button id="doctor_init" class="button is-primary is-pulled-right">Add</button>
+                    </div>
+                </div>
+                <div class="tab " id="printers">
+                    <div class="title is-3">Printers</div>
+                    <div class="table-container obj_table">
+                        <table class="table is-striped is-hoverable is-fullwidth">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>City</th>
+                                    <th>Description</th>
+                                    <th>Images</th>
+                                </tr>
+                            </thead>
+                            <tbody id="printers_data"></tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <button id="printers_init" class="button is-primary is-pulled-right">Add</button>
+                    </div>
+                </div>
+                <div class="tab" id="commodities">
                     <div class="title is-3">Commodities</div>
                     <div class="table-container obj_table">
                         <table class="table is-striped is-hoverable is-fullwidth">

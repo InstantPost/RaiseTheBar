@@ -5,10 +5,14 @@ import * as listener from "./listeners";
 import { GenericPost } from "./network";
 import { LoadVolunteers } from "./Volunteers";
 import { LoadCommodities } from "./Commodities";
+import { LoadPrinters } from "./Printers";
+import { LoadDoctors } from "./Doctors";
 import { uuid } from "./utils/uuid";
 window.onload = e => {
   LoadVolunteers();
   LoadCommodities();
+  LoadPrinters();
+  LoadDoctors();
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       position => {

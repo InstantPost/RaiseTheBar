@@ -2,11 +2,15 @@ import { id, cls } from "./selectors";
 import { order } from "./OrderForm";
 import { volunteer } from "./VolunteerForm";
 import { commodities } from "./CommoditiesForm";
+import { printers } from "./PrintersForm";
+import { doctor } from "./DoctorsForm";
 import { CloseModal } from "./Modal";
 import { ViewImg } from "./ImgViewer";
 id("order_init").addEventListener("click", order);
+id("doctor_init").addEventListener("click", doctor);
 id("volunteer_init").addEventListener("click", volunteer);
 id("commodities_init").addEventListener("click", commodities);
+id("printers_init").addEventListener("click", printers);
 id("remove_vol_prompt").addEventListener("click", e => {
   id("vol_prompt").remove();
 });
