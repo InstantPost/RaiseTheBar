@@ -42,13 +42,12 @@
                                 <div class="navbar-item">
                                     <a data-href="#home" class=" navbar-item is-white has-text-grey">
                                         Home
-                                    </a><a data-href="#comodities" class=" navbar-item is-white has-text-grey">
-                                        Comodities
+                                    </a><a data-href="#commodities" class=" navbar-item is-white has-text-grey">
+                                        Commodities
                                     </a>
                                     <a data-href="#volunteers" class=" navbar-item is-white has-text-grey">
                                         Volunteers
                                     </a>
-
                                 </div>
                             </div>
                         </div>
@@ -56,10 +55,7 @@
                 </div>
             </div>
             <div class="content-container">
-
-
-                <div id="home" class="hero-body tab active">
-
+                <div id="home" class="hero-body tab ">
                     <div class="container has-text-centered">
                         <div class="columns is-vcentered">
                             <div class="column is-half  1">
@@ -67,7 +63,6 @@
                                     Face Shield
                                 </h1>
                                 <h2 class="subtitle is-4 has-text-left">
-
                                 </h2>
                                 <br>
                                 <p class="has-text-centered  has-text-left">
@@ -84,17 +79,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab" id="comodities">
+                <div class="tab active" id="commodities">
+                    <div class="title is-3">Commodities</div>
                     <div class="table-container">
-                        <table class="table is-hoverable is-bordered is-striped  is-hoverable is-fullwidth">
+                        <table class="table is-striped is-hoverable is-fullwidth obj_table">
                             <thead>
-                                <th>Item</th>
-                                <th>Status</th>
-                                <th>Phone</th>
-                                <th>Email</th>
-                                <th>Description</th>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>City</th>
+                                    <th>Description</th>
+                                    <th>Images</th>
+                                </tr>
                             </thead>
+                            <tbody id="commodities_data"></tbody>
                         </table>
+                    </div>
+                    <div>
+                        <button id="commodities_init" class="button is-primary is-pulled-right">Add</button>
                     </div>
                 </div>
                 <div class="tab" id="volunteers">
@@ -109,14 +112,16 @@
                         <button id="remove_vol_prompt" class="delete"></button>
                     </div>
                     <h1 class="title">Volunteers</h1>
-
                     <div class="table-container">
-                        <table class="table is-hoverable is-bordered is-striped  is-hoverable is-fullwidth">
+                        <table class="table is-striped is-hoverable   is-fullwidth ">
                             <thead>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Phone</th>
-                                <th>City</th>
+                                <tr>
+
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>City</th>
+                                </tr>
                             </thead>
                             <tbody id="volunteers_data"></tbody>
                         </table>

@@ -75,15 +75,27 @@
         </div>
     </div>
     <div class="field">
-        <label class="label">Volunteering</label>
+        <label class="label">Description</label>
         <div class="control">
-            <div class="select">
-                <select id="volunteer_type" required>
-                    <option value="">-- Select --</option>
-                    <option value="Data Moderator">Data management</option>
-                    <option value="Logistics">Logistics</option>
-                </select>
-            </div>
+            <textarea id="description" class="textarea" placeholder="Description"></textarea>
+        </div>
+        <div class="public-perms">
+            <label class="checkbox">
+                <input id="desc_pref" type="checkbox" checked>
+                Public
+            </label>
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">Images</label>
+        <div class="control has-icons-left has-icons-right">
+            <input id="images" class="input" type="file" accept="image/*" multiple />
+        </div>
+        <div class="public-perms">
+            <label class="checkbox">
+                <input id="desc_pref" type="checkbox" checked>
+                Public
+            </label>
         </div>
     </div>
     <div class="field is-grouped">

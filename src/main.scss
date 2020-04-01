@@ -48,3 +48,23 @@ input[type="number"]::-webkit-outer-spin-button {
 #volunteer_init:hover {
   text-decoration: underline;
 }
+.obj_table {
+  display: block;
+  max-height: 55vh;
+  overflow: auto;
+  thead th {
+    position: sticky;
+    top: 0;
+    background: white;
+  }
+}
+.obj_img_container {
+  width: 80px;
+  .obj_img {
+    color: $link;
+  }
+  .obj_img:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

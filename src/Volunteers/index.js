@@ -8,19 +8,18 @@ export function LoadVolunteers() {
         throw new Error("There was some problem");
       }
     })
-    .then(volunteers => {
+    .then(objs => {
       let i = 0,
-        volunteer;
-      let num_volunteers = volunteers.length;
-      for (; i < num_volunteers; i++) {
-        volunteer = volunteers[i];
-        console.log(volunteers[i]);
+        obj;
+      let num_objs = objs.length;
+      for (; i < num_objs; i++) {
+        obj = objs[i];
         let row = document.createElement("tr");
         row.innerHTML += `
-        <td>${volunteer.data.name}</td>
-        <td>${volunteer.data.email}</td>
-        <td>${volunteer.data.phone}</td>
-        <td>${volunteer.data.city}</td>
+        <td>${obj.data.name}</td>
+        <td>${obj.data.email}</td>
+        <td>${obj.data.phone}</td>
+        <td>${obj.data.city}</td>
         `;
         id("volunteers_data").appendChild(row);
       }

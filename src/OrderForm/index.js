@@ -1,14 +1,14 @@
 import { id } from "../selectors";
-import { OpenModal, CloseModal } from "../Model";
+import { OpenModal, CloseModal } from "../Modal";
 import { GenericPost } from "../network";
 import FormHTML from "./index.html";
 export function order() {
   OpenModal(FormHTML);
-  id("order_container").addEventListener("submit", event => {
+  id("form_container").addEventListener("submit", event => {
     event.preventDefault();
-    if (id("order_container").classList.contains("submitted")) return;
-    id("order_container").classList.add("submitted");
-    id("order_submit").classList += " is-loading";
+    if (id("form_container").classList.contains("submitted")) return;
+    id("form_container").classList.add("submitted");
+    id("submit").classList += " is-loading";
     GenericPost(process.env.BACKEND_URI + "order", {
       name: id("name").value,
       email: id("email").value,
@@ -25,13 +25,12 @@ export function order() {
       }
     }).then(response => {
       if (response.status == 200) {
-        id("order_submit").classList = "button is-success";
-        id("order_submit").innerHTML = `<span class="icon is-small">
+        id("submit").classList = "button is-success";
+        id("submit").innerHTML = `<span class="icon is-small">
             <i class="fas fa-check"></i>
          </span>
         <span>Saved</span>`;
       }
     });
   });
-  id("order_cancel").addEventListener("click", CloseModal);
 }
