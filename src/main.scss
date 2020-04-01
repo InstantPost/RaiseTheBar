@@ -57,6 +57,16 @@ input[type="number"]::-webkit-outer-spin-button {
     top: 0;
     background: white;
   }
+  .obj_description {
+    max-width: 200px;
+    max-height: 150px;
+    overflow: auto;
+    word-wrap: break-word;
+    a:hover {
+      text-decoration: underline;
+      color: $link;
+    }
+  }
 }
 .obj_img_container {
   width: 80px;
