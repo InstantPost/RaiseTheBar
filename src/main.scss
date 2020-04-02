@@ -25,9 +25,21 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .tab {
   display: none;
+  .fixed {
+    position: fixed;
+    bottom: 55px;
+    right: 20px;
+    z-index: 1;
+  }
 }
 .tab.active {
   display: block;
+}
+.nav-logo {
+  height: 40px !important;
+  position: relative;
+  right: 33px;
+  max-height: unset !important;
 }
 .content-container {
   min-height: 80vh;
@@ -57,33 +69,41 @@ input[type="number"]::-webkit-outer-spin-button {
 .data-wrapper {
   width: 100%;
   .data-container {
-    display: table;
     margin: 0 auto;
-    max-width: 600px;
-    width: 65vw;
     .data-obj-container {
-      max-height: 60vh;
-      overflow: auto;
       padding: 10px;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
       overflow-x: hidden;
+      flex-wrap: wrap;
       width: 100%;
       .data-row {
-        margin: 10px 0;
+        width: 500px;
+        margin: 3px;
         border: 1.5px solid lavender;
         border-radius: 3px;
       }
+      @media (max-width: 768px) {
+        .data-row {
+          max-width: 320px;
+        }
+      }
     }
     .obj-details-photos::-webkit-scrollbar {
-      height: 0px;
+      height: 2px;
     }
     .obj-created-time {
       position: relative;
     }
     .obj-details-desc {
-      max-width: 250px;
+      max-width: 100%;
       max-height: 100px;
       overflow: auto;
       overflow-wrap: break-word;
+    }
+    .obj-details-desc::-webkit-scrollbar {
+      height: 2px;
     }
     .link {
       color: $link;
@@ -97,11 +117,7 @@ input[type="number"]::-webkit-outer-spin-button {
       flex-direction: row;
       max-width: 500px;
       overflow: auto;
-      div {
-        // min-height: 200px;
-        min-width: 100%;
-      }
-      div img {
+      img {
         max-width: 100%;
         max-height: 150px;
       }

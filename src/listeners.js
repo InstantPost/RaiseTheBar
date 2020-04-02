@@ -29,6 +29,10 @@ document.querySelector("body").addEventListener("click", event => {
   if (target.classList.contains("navbar-item")) {
     const tab = target.getAttribute("data-href");
     if (!tab) return;
+    Array.from(cls("navbar-item")).forEach(el => {
+      el.classList = "navbar-item is-white has-text-grey";
+    });
+    target.classList = "navbar-item is-white has-text-primary";
     Array.from(cls("tab")).forEach(el => {
       el.classList.remove("active");
     });
