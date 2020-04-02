@@ -1,6 +1,6 @@
 import { id } from "../selectors";
 import { OpenModal, CloseModal } from "../Modal";
-import { GenericPost } from "../network";
+import { AddObj } from "../AddObj";
 import FormHTML from "./index.html";
 export function commodities() {
   OpenModal(FormHTML);
@@ -42,41 +42,26 @@ export function commodities() {
     fetch(process.env.BACKEND_URI + "commodity/", {
       method: "post",
       body: form
-    }).then(response => {
-      if (response.status == 200) {
-        id("submit").classList = "button is-success";
-        id("submit").innerHTML = `<span class="icon is-small">
+    })
+      .then(response => {
+        if (response.status == 200) {
+          id("submit").classList = "button is-success";
+          id("submit").innerHTML = `<span class="icon is-small">
             <i class="fas fa-check"></i>
          </span>
         <span>Saved</span>`;
-        setTimeout(CloseModal, 1500);
-      } else {
-        alert("There was some problem please check after some time");
-      }
-    });
-    /*GenericPost(process.env.BACKEND_URI + "volunteer", {
-      name: id("name").value,
-      email: id("email").value,
-      phone: id("phone").value,
-      type: id("volunteer_type").value,
-      city: id("city").value,
-      city_pin: id("city_pin").value,
-      description: id("description").value,
-      public_data: {
-        name: id("name_pref").checked,
-        email: id("email_pref").checked,
-        phone: id("phone_pref").checked,
-        city: id("city_pref").checked,
-        city_pin: id("city_pin_pref").checked
-      }
-    }).then(response => {
-      if (response.status == 200) {
-        id("volunteer_submit").classList = "button is-success";
-        id("volunteer_submit").innerHTML = `<span class="icon is-small">
-            <i class="fas fa-check"></i>
-         </span>
-        <span>Saved</span>`;
-      }
-    });*/
+          setTimeout(CloseModal, 1500);
+          return response.json();
+        } else {
+          alert("There was some problem please check after some time");
+        }
+      })
+      .then(json => {
+        console.log(json);
+        AddObj(json.data, "commodities_data", "commodity");
+      })
+      .catch(err => {
+        console.log(err);
+      });
   });
 }

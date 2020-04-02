@@ -1,12 +1,11 @@
 import { id } from "../selectors";
 import { OpenModal, CloseModal } from "../Modal";
-import { GenericPost } from "../network";
 import FormHTML from "./index.html";
+import { AddObj } from "../AddObj";
 export function doctor() {
   OpenModal(FormHTML);
   id("form_container").addEventListener("submit", event => {
     event.preventDefault();
-
     let data = {
       name: id("name").value,
       email: id("email").value,
@@ -42,18 +41,26 @@ export function doctor() {
     fetch(process.env.BACKEND_URI + "doctor/", {
       method: "post",
       body: form
-    }).then(response => {
-      if (response.status == 200) {
-        id("submit").classList = "button is-success";
-        id("submit").innerHTML = `<span class="icon is-small">
+    })
+      .then(response => {
+        if (response.status == 200) {
+          id("submit").classList = "button is-success";
+          id("submit").innerHTML = `<span class="icon is-small">
             <i class="fas fa-check"></i>
          </span>
         <span>Saved</span>`;
-        setTimeout(CloseModal, 1500);
-      } else {
-        alert("There was some problem please check after some time");
-      }
-    });
+          setTimeout(CloseModal, 1500);
+          return response.json();
+        } else {
+          alert("There was some problem please check after some time");
+          throw "Error";
+        }
+      })
+      .then(json => {
+        console.log(json);
+        AddObj(json.data, "doctors_data", "doctor");
+      })
+      .catch(err => {});
     /*GenericPost(process.env.BACKEND_URI + "volunteer", {
       name: id("name").value,
       email: id("email").value,

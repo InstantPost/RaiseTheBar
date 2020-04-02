@@ -10,8 +10,8 @@ import { filter } from "./FilterData";
 id("order_init").addEventListener("click", order);
 id("doctor_init").addEventListener("click", doctor);
 id("volunteer_init").addEventListener("click", volunteer);
-id("commodities_init").addEventListener("click", commodities);
-id("printers_init").addEventListener("click", printers);
+id("commodity_init").addEventListener("click", commodities);
+id("printer_init").addEventListener("click", printers);
 id("remove_vol_prompt").addEventListener("click", e => {
   id("vol_prompt").remove();
 });
@@ -24,10 +24,7 @@ document.querySelector("body").addEventListener("click", event => {
     CloseModal();
   }
   if (target.classList.contains("obj_img")) {
-    ViewImg(
-      target.getAttribute("data-obj"),
-      target.getAttribute("data-img-id")
-    );
+    ViewImg(target.getAttribute("src"));
   }
   if (target.classList.contains("navbar-item")) {
     const tab = target.getAttribute("data-href");
