@@ -48,6 +48,12 @@ input[type="number"]::-webkit-outer-spin-button {
 #volunteer_init:hover {
   text-decoration: underline;
 }
+.filter-data-container {
+  .filter_table_data {
+    color: black !important;
+    pointer-events: none;
+  }
+}
 .data-wrapper {
   width: 100%;
   .data-container {
