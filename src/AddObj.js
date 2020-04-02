@@ -5,6 +5,7 @@ export function AddObj(obj, target, entity) {
   let row = document.createElement("div");
   row.classList = "data-row box";
   row.innerHTML = Template;
+  const date = new Date(obj.created);
   row.getElementsByClassName("obj-details-table")[0].innerHTML += `
           <div>
                 <b>Name : </b><span>${obj.data.name}</span>
@@ -25,6 +26,9 @@ export function AddObj(obj, target, entity) {
   row.getElementsByClassName("obj-details-desc")[0].innerHTML += urlify(
     obj.data.description
   );
+  row.getElementsByClassName(
+    "obj-created-time"
+  )[0].innerHTML = date.toISOString().substring(0, 10);
   const imgs = obj.data.images;
   let ImgsContainer = row.getElementsByClassName("obj-details-photos")[0];
   if (imgs.length) {

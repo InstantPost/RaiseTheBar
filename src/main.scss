@@ -70,6 +70,10 @@ input[type="number"]::-webkit-outer-spin-button {
     .obj-details-photos::-webkit-scrollbar {
       height: 0px;
     }
+    .obj-created-time {
+    position: relative;
+    
+    }
     .obj-details-desc {
       max-width: 250px;
       max-height: 100px;
