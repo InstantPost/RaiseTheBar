@@ -6,6 +6,7 @@ import { printers } from "./PrintersForm";
 import { doctor } from "./DoctorsForm";
 import { CloseModal } from "./Modal";
 import { ViewImg } from "./ImgViewer";
+import { filter } from "./FilterData";
 id("order_init").addEventListener("click", order);
 id("doctor_init").addEventListener("click", doctor);
 id("volunteer_init").addEventListener("click", volunteer);
@@ -16,6 +17,9 @@ id("remove_vol_prompt").addEventListener("click", e => {
 });
 document.querySelector("body").addEventListener("click", event => {
   const target = event.target;
+  if (target.classList.contains("filter_table_data")) {
+    filter(target);
+  }
   if (target.classList.contains("form_cancel")) {
     CloseModal();
   }

@@ -1,5 +1,5 @@
 import { id } from "../selectors";
-import { OpenModal } from "../Modal";
+import { OpenModal, CloseModal } from "../Modal";
 import { GenericPost } from "../network";
 import FormHTML from "./index.html";
 export function commodities() {
@@ -49,6 +49,9 @@ export function commodities() {
             <i class="fas fa-check"></i>
          </span>
         <span>Saved</span>`;
+        setTimeout(CloseModal, 1500);
+      } else {
+        alert("There was some problem please check after some time");
       }
     });
     /*GenericPost(process.env.BACKEND_URI + "volunteer", {

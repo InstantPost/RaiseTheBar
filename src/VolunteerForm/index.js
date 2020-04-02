@@ -30,6 +30,9 @@ export function volunteer() {
             <i class="fas fa-check"></i>
          </span>
         <span>Saved</span>`;
+        setTimeout(CloseModal, 1500);
+      } else {
+        alert("There was some problem please check after some time");
       }
     });
   });

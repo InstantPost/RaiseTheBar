@@ -19,9 +19,18 @@ export function LoadPrinters() {
         let row = document.createElement("tr");
         row.innerHTML += `
         <td>${obj.data.name}</td>
-        <td>${obj.data.email}</td>
-        <td>${obj.data.phone}</td>
-        <td>${obj.data.city}</td>
+       <td><span data="printer" data-filter-by="email" class="link filter_table_data">${
+         obj.data.email
+       }</span></td>
+        <td><span data="printer" data-filter-by="phone" class="link filter_table_data">${
+          obj.data.phone
+        }</span></td>
+        <td><span data="printer" data-filter-by="city" class="link filter_table_data">${
+          obj.data.city
+        }</span></td>
+        <td><span data="printer" data-filter-by="city_pin" class="link filter_table_data">${
+          obj.data.city_pin
+        }</span></td>
         <td><div class="obj_description">${urlify(
           obj.data.description
         )}</div></td>

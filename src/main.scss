@@ -57,6 +57,13 @@ input[type="number"]::-webkit-outer-spin-button {
     top: 0;
     background: white;
   }
+  .link {
+    color: $link;
+  }
+  .link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
   .obj_description {
     max-width: 200px;
     max-height: 150px;

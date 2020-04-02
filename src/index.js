@@ -12,7 +12,7 @@ window.onload = e => {
   LoadVolunteers();
   LoadCommodities();
   LoadPrinters();
-  LoadDoctors();
+  // LoadDoctors();
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       position => {

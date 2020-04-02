@@ -30,6 +30,7 @@ export function order() {
             <i class="fas fa-check"></i>
          </span>
         <span>Saved</span>`;
+        setTimeout(CloseModal, 1500);
       }
     });
   });

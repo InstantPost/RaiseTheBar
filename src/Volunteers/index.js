@@ -17,9 +17,10 @@ export function LoadVolunteers() {
         let row = document.createElement("tr");
         row.innerHTML += `
         <td>${obj.data.name}</td>
-        <td>${obj.data.email}</td>
+         <td><span data="volunteer" data-filter-by="email" class="link filter_table_data">${obj.data.email}</span></td>
         <td>${obj.data.phone}</td>
-        <td>${obj.data.city}</td>
+         <td><span data="volunteer" data-filter-by="city" class="link filter_table_data">${obj.data.city}</span></td>
+         <td><span data="volunteer" data-filter-by="city_pin" class="link filter_table_data">${obj.data.city_pin}</span></td>
         `;
         id("volunteers_data").appendChild(row);
       }
