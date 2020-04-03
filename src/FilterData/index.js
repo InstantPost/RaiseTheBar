@@ -6,12 +6,7 @@ export function filter(element) {
   const endpoint = element.getAttribute("data");
   const FilterBy = element.getAttribute("data-filter-by");
   const FilterValue = element.innerText;
-  console.log(
-    `${process.env.BACKEND_URI}${endpoint}/?filter_by=${FilterBy}&filter_val=${FilterValue}`
-  );
-  fetch(
-    `${process.env.BACKEND_URI}${endpoint}/?filter_by=${FilterBy}&filter_val=${FilterValue}`
-  )
+  fetch(`${process.env.BACKEND_URI}${endpoint}/`)
     .then(res => {
       if (res.status == 200) {
         return res.json();
@@ -22,6 +17,9 @@ export function filter(element) {
     })
     .then(objs => {
       OpenModal(FilterDataTemplate);
+      objs = objs.filter(elem => {
+        return elem.data[FilterBy] == FilterValue;
+      });
       id(
         "filter-title"
       ).innerHTML = `Filtered results by ${FilterBy} for ${FilterValue}`;
