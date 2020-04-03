@@ -36,9 +36,9 @@ input[type="number"]::-webkit-outer-spin-button {
   display: none;
   .fixed {
     position: fixed;
-    bottom: 55px;
-    right: 20px;
-    z-index: 1;
+    top: 9px;
+    left: 216px;
+    z-index: 33;
   }
 }
 .tab.active {
@@ -99,9 +99,9 @@ input[type="number"]::-webkit-outer-spin-button {
         }
       }
     }
-    .obj-details-photos::-webkit-scrollbar {
-      height: 2px;
-    }
+    // .obj-details-photos::-webkit-scrollbar {
+    //   height: 2px;
+    // }
     .obj-created-time {
       position: relative;
     }
