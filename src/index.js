@@ -38,7 +38,7 @@ window.onload = e => {
 };
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
-    .register("/covid/sw.js")
+    .register("/sw.js")
     .then(registration => {
       console.log("SW registered: ", registration);
     })
