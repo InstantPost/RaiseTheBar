@@ -2,8 +2,13 @@ import { id } from "../selectors";
 import { OpenModal, CloseModal } from "../Modal";
 import { AddObj } from "../AddObj";
 import FormHTML from "./index.html";
+import { VerifyCaptch } from "../Captcha";
 export function commodities() {
   OpenModal(FormHTML);
+  grecaptcha.render(document.getElementById("captcha"), {
+    sitekey: process.env.CAPTCHA_KEY,
+    callback: VerifyCaptch
+  });
   id("form_container").addEventListener("submit", event => {
     event.preventDefault();
 

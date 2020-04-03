@@ -2,8 +2,13 @@ import { id } from "../selectors";
 import { OpenModal, CloseModal } from "../Modal";
 import FormHTML from "./index.html";
 import { AddObj } from "../AddObj";
+import { VerifyCaptch } from "../Captcha";
 export function doctor() {
   OpenModal(FormHTML);
+  grecaptcha.render(document.getElementById("captcha"), {
+    sitekey: process.env.CAPTCHA_KEY,
+    callback: VerifyCaptch
+  });
   id("form_container").addEventListener("submit", event => {
     event.preventDefault();
     let data = {
@@ -60,30 +65,8 @@ export function doctor() {
         console.log(json);
         AddObj(json.data, "doctors_data", "doctor");
       })
-      .catch(err => {});
-    /*GenericPost(process.env.BACKEND_URI + "volunteer", {
-      name: id("name").value,
-      email: id("email").value,
-      phone: id("phone").value,
-      type: id("volunteer_type").value,
-      city: id("city").value,
-      city_pin: id("city_pin").value,
-      description: id("description").value,
-      public_data: {
-        name: id("name_pref").checked,
-        email: id("email_pref").checked,
-        phone: id("phone_pref").checked,
-        city: id("city_pref").checked,
-        city_pin: id("city_pin_pref").checked
-      }
-    }).then(response => {
-      if (response.status == 200) {
-        id("volunteer_submit").classList = "button is-success";
-        id("volunteer_submit").innerHTML = `<span class="icon is-small">
-            <i class="fas fa-check"></i>
-         </span>
-        <span>Saved</span>`;
-      }
-    });*/
+      .catch(err => {
+        console.log(err);
+      });
   });
 }

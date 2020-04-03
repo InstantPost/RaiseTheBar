@@ -4,6 +4,9 @@
 .navbar-item.has-dropdown .navbar-dropdown {
   display: none;
 }
+#order_init {
+  pointer-events: none;
+}
 .navbar-item.has-dropdown.is-active .navbar-dropdown {
   display: block;
 }

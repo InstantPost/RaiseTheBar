@@ -1,6 +1,5 @@
 <form id="form_container" class="box">
     <div class="field">
-        <label class="label">Name</label>
         <div class="control">
             <input id="name" class="input" type="text" placeholder="Full Name" required>
         </div>
@@ -12,7 +11,6 @@
         </div>
     </div>
     <div class="field">
-        <label class="label">Phone</label>
         <div class="control has-icons-left has-icons-right">
             <input title="Phone number should contain atleast 10 digits, starting with 6,7,8,9" pattern="[6789][0-9]{9}"
                 maxlength="10" id="phone" class="input" type="text" placeholder="Phone number" required>
@@ -28,7 +26,6 @@
         </div>
     </div>
     <div class="field">
-        <label class="label">Email</label>
         <div class="control has-icons-left has-icons-right">
             <input id="email" class="input" type="email" placeholder="Email" required>
             <span class="icon is-small is-left">
@@ -44,7 +41,6 @@
     </div>
     <div class="columns">
         <div class="column">
-            <label class="label">City</label>
             <div class="control has-icons-left has-icons-right">
                 <input id="city" class="input" type="text" placeholder="City" required>
                 <span class="icon is-small is-left">
@@ -59,9 +55,9 @@
             </div>
         </div>
         <div class="column">
-            <label class="label">Pincode</label>
             <div class="control has-icons-left has-icons-right">
-                <input id="city_pin" class="input" type="text" placeholder="Pincode" required>
+                <input title="6 digit pincode is required" pattern="^[1-9][0-9]{5}$" id="city_pin" class="input"
+                    type="text" placeholder="Pincode" required>
                 <span class="icon is-small is-left">
                     <i class="fas fa-hashtag"></i>
                 </span>
@@ -75,20 +71,34 @@
         </div>
     </div>
     <div class="field">
-        <label class="label">Volunteering</label>
         <div class="control">
-            <div class="select">
-                <select id="volunteer_type" required>
-                    <option value="">-- Select --</option>
-                    <option value="Data Moderator">Data management</option>
-                    <option value="Logistics">Logistics</option>
-                </select>
-            </div>
+            <textarea title="Where would you like to contribute?" id="description" class="textarea"
+                placeholder="Description" required></textarea>
+        </div>
+        <div class="public-perms">
+            <label class="checkbox">
+                <input id="desc_pref" type="checkbox" checked>
+                Public
+            </label>
         </div>
     </div>
+    <div class="field">
+        <label class="label">Images</label>
+        <div class="control has-icons-left has-icons-right">
+            <input id="images" class="input" type="file" accept="image/*" multiple />
+        </div>
+        <div class="public-perms">
+            <label class="checkbox">
+                <input id="desc_pref" type="checkbox" checked>
+                Public
+            </label>
+        </div>
+    </div>
+    <div id="captcha"></div>
+    <br>
     <div class="field is-grouped">
         <div class="control">
-            <button id="submit" type="submit" class="button is-link">Submit</button>
+            <button id="submit" type="submit" class="button is-link" disabled>Submit</button>
         </div>
         <div class="control">
             <button class="button is-link is-light form_cancel">Cancel</button>

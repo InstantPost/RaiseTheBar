@@ -1,39 +1,74 @@
 import { id } from "../selectors";
 import { OpenModal, CloseModal } from "../Modal";
-import { GenericPost } from "../network";
 import FormHTML from "./index.html";
+import { AddObj } from "../AddObj";
+import { VerifyCaptch } from "../Captcha";
 export function volunteer() {
   OpenModal(FormHTML);
+  grecaptcha.render(document.getElementById("captcha"), {
+    sitekey: process.env.CAPTCHA_KEY,
+    callback: VerifyCaptch
+  });
   id("form_container").addEventListener("submit", event => {
     event.preventDefault();
-    if (id("form_container").classList.contains("submitted")) return;
-    id("form_container").classList.add("submitted");
-    id("submit").classList += " is-loading";
-    GenericPost(process.env.BACKEND_URI + "volunteer", {
+    console.log(id("captcha").value);
+    return;
+    let data = {
       name: id("name").value,
       email: id("email").value,
       phone: id("phone").value,
-      type: id("volunteer_type").value,
       city: id("city").value,
       city_pin: id("city_pin").value,
+      description: id("description").value,
       public_data: {
         name: id("name_pref").checked,
         email: id("email_pref").checked,
         phone: id("phone_pref").checked,
         city: id("city_pref").checked,
-        city_pin: id("city_pin_pref").checked
+        city_pin: id("city_pin_pref").checked,
+        description: id("desc_pref").checked
       }
-    }).then(response => {
-      if (response.status == 200) {
-        id("submit").classList = "button is-success";
-        id("submit").innerHTML = `<span class="icon is-small">
+    };
+    let form = new FormData();
+    form.append("data", JSON.stringify(data));
+    const num_images = document.getElementById("images").files.length;
+    console.log(num_images);
+    if (num_images > 10) {
+      alert("Only 10 Images are allowed");
+      return;
+    }
+    if (num_images) {
+      for (let i = 0; i < num_images; i++) {
+        form.append("files[]", document.getElementById("images").files[i]);
+      }
+    }
+    if (id("form_container").classList.contains("submitted")) return;
+    id("form_container").classList.add("submitted");
+    id("submit").classList += " is-loading";
+    fetch(process.env.BACKEND_URI + "volunteer/", {
+      method: "post",
+      body: form
+    })
+      .then(response => {
+        if (response.status == 200) {
+          id("submit").classList = "button is-success";
+          id("submit").innerHTML = `<span class="icon is-small">
             <i class="fas fa-check"></i>
          </span>
         <span>Saved</span>`;
-        setTimeout(CloseModal, 1500);
-      } else {
-        alert("There was some problem please check after some time");
-      }
-    });
+          setTimeout(CloseModal, 1500);
+          return response.json();
+        } else {
+          alert("There was some problem please check after some time");
+          throw "Error";
+        }
+      })
+      .then(json => {
+        console.log(json);
+        AddObj(json.data, "volunteers_data", "volunteer");
+      })
+      .catch(err => {
+        console.log(err);
+      });
   });
 }

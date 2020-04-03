@@ -15,6 +15,17 @@ id("printer_init").addEventListener("click", printers);
 id("remove_vol_prompt").addEventListener("click", e => {
   id("vol_prompt").remove();
 });
+document.querySelector("body").addEventListener("wheel", event => {
+  const target = event.target;
+  if (target.classList.contains("obj_img")) {
+    console.log(event);
+    if (event.deltaX) {
+      return;
+    }
+    if (event.deltaY > 0) target.parentNode.scrollLeft += 100;
+    else target.parentNode.scrollLeft -= 100;
+  }
+});
 document.querySelector("body").addEventListener("click", event => {
   const target = event.target;
   if (target.classList.contains("filter_table_data")) {

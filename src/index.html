@@ -63,7 +63,7 @@
                 </div>
             </div>
             <div class="content-container">
-                <div id="home" class="hero-body tab active">
+                <div id="home" class="hero-body tab">
                     <div class="container has-text-centered">
                         <div class="columns is-vcentered">
                             <div class="column is-half  1">
@@ -116,7 +116,7 @@
                     </div>
 
                 </div>
-                <div class="tab" id="volunteers">
+                <div class="tab active" id="volunteers">
                     <br>
                     <div id="vol_prompt" class="volunteer-btn-container notification is-primary is-light">
                         <span class="title is-5">
@@ -127,20 +127,10 @@
                         </button>
                         <button id="remove_vol_prompt" class="delete"></button>
                     </div>
-                    <div class="table-container obj_table">
-                        <table class="table is-striped is-hoverable   is-fullwidth ">
-                            <thead>
-                                <tr>
-
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Phone</th>
-                                    <th>City</th>
-                                    <th>Pincode</th>
-                                </tr>
-                            </thead>
-                            <tbody id="volunteers_data"></tbody>
-                        </table>
+                    <div class="data-wrapper">
+                        <div class="data-container " id="">
+                            <div id="volunteers_data" class="data-obj-container"></div>
+                        </div>
                     </div>
 
                 </div>
@@ -159,6 +149,8 @@
             </div>
         </footer>
     </div>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </body>
 
 </html>
