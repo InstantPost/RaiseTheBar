@@ -9,20 +9,22 @@ if (workbox) {
   console.log(`Yay! Workbox is loaded 🎉`);
   workbox.routing.registerRoute(
     new RegExp(".+/(volunteer|doctor|printer|commodity)/.+"),
-    new workbox.strategies.StaleWhileRevalidate({
-      cacheName: "network_cache"
+    new workbox.strategies.NetworkFirst({
+      networkTimeoutSeconds: 3,
+      cacheName: "network_cache",
     })
   );
   workbox.routing.registerRoute(
     new RegExp(".+/covid_img_store/.+"),
     new workbox.strategies.CacheFirst({
-      cacheName: "uploaded_image_cache"
+      cacheName: "uploaded_image_cache",
     })
   );
   workbox.routing.registerRoute(
     new RegExp(".+/(volunteer|doctor|printer|commodity)/"),
-    new workbox.strategies.StaleWhileRevalidate({
-      cacheName: "network_cache"
+    new workbox.strategies.NetworkFirst({
+      networkTimeoutSeconds: 3,
+      cacheName: "network_cache",
     })
   );
   workbox.precaching.precacheAndRoute(self.__WB_MANIFEST);

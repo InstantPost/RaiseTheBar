@@ -12,10 +12,7 @@ id("doctor_init").addEventListener("click", doctor);
 id("volunteer_init").addEventListener("click", volunteer);
 id("commodity_init").addEventListener("click", commodities);
 id("printer_init").addEventListener("click", printers);
-id("remove_vol_prompt").addEventListener("click", e => {
-  id("vol_prompt").remove();
-});
-document.querySelector("body").addEventListener("wheel", event => {
+document.querySelector("body").addEventListener("wheel", (event) => {
   const target = event.target;
   if (target.classList.contains("obj_img")) {
     if (event.deltaX) {
@@ -25,7 +22,7 @@ document.querySelector("body").addEventListener("wheel", event => {
     else target.parentNode.scrollLeft -= 50;
   }
 });
-document.querySelector("body").addEventListener("click", event => {
+document.querySelector("body").addEventListener("click", (event) => {
   const target = event.target;
   if (target.classList.contains("filter_table_data")) {
     filter(target);
@@ -39,11 +36,11 @@ document.querySelector("body").addEventListener("click", event => {
   if (target.classList.contains("navbar-item")) {
     const tab = target.getAttribute("data-href");
     if (!tab) return;
-    Array.from(cls("navbar-item")).forEach(el => {
+    Array.from(cls("navbar-item")).forEach((el) => {
       el.classList = "navbar-item is-white has-text-grey";
     });
     target.classList = "navbar-item is-white has-text-primary";
-    Array.from(cls("tab")).forEach(el => {
+    Array.from(cls("tab")).forEach((el) => {
       el.classList.remove("active");
     });
     document.querySelector(tab).classList += " active";

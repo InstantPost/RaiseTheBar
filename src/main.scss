@@ -58,16 +58,9 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 #vol_prompt {
   text-align: center;
-}
-#volunteer_init {
-  background: none;
-  border: none;
-  color: darkcyan;
-  cursor: pointer;
-  font-weight: bold;
-}
-#volunteer_init:hover {
-  text-decoration: underline;
+  button {
+    font-weight: bold;
+  }
 }
 .filter-data-container {
   .filter_table_data {
@@ -98,6 +91,11 @@ input[type="number"]::-webkit-outer-spin-button {
           max-width: 320px;
         }
       }
+      @media (max-width: 468px) {
+        .data-row {
+          max-width: 255px;
+        }
+      }
     }
     // .obj-details-photos::-webkit-scrollbar {
     //   height: 2px;
@@ -110,6 +108,12 @@ input[type="number"]::-webkit-outer-spin-button {
       max-height: 100px;
       overflow: auto;
       overflow-wrap: break-word;
+      background: white;
+      white-space: pre-wrap;
+      white-space: -moz-pre-wrap;
+      white-space: -pre-wrap;
+      white-space: -o-pre-wrap;
+      word-wrap: break-word;
     }
     .obj-details-desc::-webkit-scrollbar {
       height: 2px;
@@ -134,9 +138,14 @@ input[type="number"]::-webkit-outer-spin-button {
       flex-direction: row;
       max-width: 500px;
       overflow: auto;
+      border: 1px solid lavender;
+      border-radius: 4px;
+      max-height: 180px;
       img {
-        max-width: 100%;
-        max-height: 150px;
+        height: fit-content;
+        max-height: 133px;
+        padding: 3px;
+        border: 1px solid lavender;
       }
     }
     .obj-details-table div {
@@ -146,27 +155,6 @@ input[type="number"]::-webkit-outer-spin-button {
       background: blue;
       height: 100px;
       margin: 10px;
-    }
-  }
-}
-.obj_table {
-  display: block;
-  max-height: 55vh;
-  overflow: auto;
-  thead th {
-    position: sticky;
-    top: 0;
-    background: white;
-  }
-
-  .obj_description {
-    max-width: 200px;
-    max-height: 150px;
-    overflow: auto;
-    word-wrap: break-word;
-    a:hover {
-      text-decoration: underline;
-      color: $link;
     }
   }
 }

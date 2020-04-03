@@ -1,6 +1,6 @@
 import Template from "./template.html";
 import { id } from "./selectors";
-import { urlify } from "./utils/urlify";
+import utils from "./utils";
 export function AddObj(obj, target, entity) {
   id(target).innerHTML += "";
   let row = document.createElement("div");
@@ -44,9 +44,9 @@ export function AddObj(obj, target, entity) {
   }</span>
             </div>
         `;
-  row.getElementsByClassName("obj-details-desc")[0].innerHTML += urlify(
-    obj.data.description
-  );
+  let desc = utils.urlify(obj.data.description);
+  desc = utils.boldText(desc);
+  row.getElementsByClassName("obj-details-desc")[0].innerHTML += desc;
   row.getElementsByClassName(
     "obj-created-time"
   )[0].innerHTML = date.toISOString().substring(0, 10);
