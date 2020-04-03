@@ -18,12 +18,11 @@ id("remove_vol_prompt").addEventListener("click", e => {
 document.querySelector("body").addEventListener("wheel", event => {
   const target = event.target;
   if (target.classList.contains("obj_img")) {
-    console.log(event);
     if (event.deltaX) {
       return;
     }
-    if (event.deltaY > 0) target.parentNode.scrollLeft += 100;
-    else target.parentNode.scrollLeft -= 100;
+    if (event.deltaY > 0) target.parentNode.scrollLeft += 50;
+    else target.parentNode.scrollLeft -= 50;
   }
 });
 document.querySelector("body").addEventListener("click", event => {

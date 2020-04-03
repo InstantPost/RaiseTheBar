@@ -108,6 +108,14 @@ input[type="number"]::-webkit-outer-spin-button {
     .obj-details-desc::-webkit-scrollbar {
       height: 2px;
     }
+    .obj_data_private {
+      color: black !important;
+      pointer-events: none;
+    }
+    .obj_data_private:hover {
+      text-decoration: none;
+      cursor: default;
+    }
     .link {
       color: $link;
     }

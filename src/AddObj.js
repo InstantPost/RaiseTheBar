@@ -9,19 +9,39 @@ export function AddObj(obj, target, entity) {
   const date = new Date(obj.created);
   row.getElementsByClassName("obj-details-table")[0].innerHTML += `
           <div>
-                <span >${obj.data.name}</span>
+                <span class="filter_table_data obj_data_private">${
+                  obj.data.name
+                }</span>
             </div>
             <div>
-                <span data=${entity} data-filter-by="email" class="link filter_table_data">${obj.data.email}</span>
+                <span data=${entity} data-filter-by="email" class="link filter_table_data ${
+    obj.data.public_data["email"] ? "" : "obj_data_private"
+  }">${
+    obj.data.public_data["email"] ? obj.data.email : "Email not disclosed"
+  }</span>
             </div>
             <div>
-                <span data=${entity}  class="link filter_table_data" data-filter-by="phone">${obj.data.phone}</span>
+                <span data=${entity}  class="link filter_table_data ${
+    obj.data.public_data["phone"] ? "" : "obj_data_private"
+  }"data-filter-by="phone">${
+    obj.data.public_data["phone"] ? obj.data.phone : "Phone not disclosed"
+  }</span>
             </div>
             <div>
-                <span data=${entity}  class="link filter_table_data" data-filter-by="city">${obj.data.city}</span>
+                <span data=${entity}  class="link filter_table_data ${
+    obj.data.public_data["city"] ? "" : "obj_data_private"
+  }" data-filter-by="city">${
+    obj.data.public_data["city"] ? obj.data.city : "City not disclosed"
+  }</span>
             </div>
             <div>
-                <span data=${entity}  class="link filter_table_data" data-filter-by="city_pin">${obj.data.city_pin}</span>
+                <span data=${entity} class="link filter_table_data ${
+    obj.data.public_data["city_pin"] ? "" : "obj_data_private"
+  }" data-filter-by="city_pin">${
+    obj.data.public_data["city_pin"]
+      ? obj.data.city_pin
+      : "Pincode not disclosed"
+  }</span>
             </div>
         `;
   row.getElementsByClassName("obj-details-desc")[0].innerHTML += urlify(
