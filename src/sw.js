@@ -24,7 +24,7 @@ skipWaiting();
 clientsClaim();
 registerRoute(
   new RegExp(".+/volunteer/.+"),
-  new StaleWhileRevalidate({
+  new workbox.stategies.StaleWhileRevalidate({
     cacheName: "static-resources"
   })
 );
