@@ -26,7 +26,7 @@ module.exports = {
     path: path.join(__dirname, "../dist"),
     // .[contentHash].
     filename: `bundle${
-      process.env.NODE_ENV == "production" ? ".[contentHash]." : "."
+      process.env.NODE_ENV != "development" ? ".[contentHash]." : "."
     }js`
   },
   plugins: [

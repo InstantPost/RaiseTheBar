@@ -7,12 +7,8 @@ module.exports = merge(common, {
   mode: "production",
   devtool: "source-map",
   stats: "errors-only",
-
   bail: true,
   plugins: [
-    // new Webpack.DefinePlugin({
-    //   "process.env.NODE_ENV": JSON.stringify("production")
-    // }),
     new Webpack.optimize.ModuleConcatenationPlugin(),
     new workboxPlugin.InjectManifest({
       swSrc: "./src/sw.js"
