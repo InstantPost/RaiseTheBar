@@ -4,6 +4,12 @@
 .navbar-item.has-dropdown .navbar-dropdown {
   display: none;
 }
+#refresh {
+  color: #333333;
+  position: relative;
+  top: 16px;
+  right: 55px;
+}
 #order_init {
   pointer-events: none;
 }
