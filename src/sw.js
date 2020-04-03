@@ -22,12 +22,13 @@ if (env == "dev") {
 }
 skipWaiting();
 clientsClaim();
+registerRoute(
+  new RegExp(".+/volunteer/.+"),
+  new StaleWhileRevalidate({
+    cacheName: "static-resources"
+  })
+);
 precacheAndRoute(self.__WB_MANIFEST);
-const handler = async ({ url, event }) => {
-  console.log(url, event);
-  return new Response(`Custom handler response.`);
-};
-registerRoute(new RegExp(".+/volunteer/.+"), handler);
 registerRoute(
   /\.(?:png|gif|jpg|svg)$/,
   new CacheFirst({
