@@ -11,8 +11,6 @@ export function volunteer() {
   });
   id("form_container").addEventListener("submit", event => {
     event.preventDefault();
-    console.log(id("captcha").value);
-    return;
     let data = {
       name: id("name").value,
       email: id("email").value,
