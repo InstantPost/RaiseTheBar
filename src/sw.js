@@ -3,6 +3,8 @@ importScripts(
 );
 
 if (workbox) {
+  workbox.core.skipWaiting();
+  workbox.core.clientsClaim();
   console.log(workbox.stategies, workbox);
   console.log(`Yay! Workbox is loaded 🎉`);
   workbox.routing.registerRoute(
@@ -11,6 +13,7 @@ if (workbox) {
       cacheName: "static-resources"
     })
   );
+  workbox.precaching.precacheAndRoute([]);
 } else {
   console.log(`Boo! Workbox didn't load 😬`);
 }
