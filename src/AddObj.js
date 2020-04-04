@@ -1,6 +1,7 @@
 import Template from "./template.html";
 import { id } from "./selectors";
 import utils from "./utils";
+import PdfIcon from "./assets/pdf_logo.png";
 export function AddObj(obj, target, entity) {
   id(target).innerHTML += "";
   let row = document.createElement("div");
@@ -57,7 +58,18 @@ export function AddObj(obj, target, entity) {
     for (let i = 0; i < num_img; i++) {
       let img = document.createElement("img");
       img.classList = "obj_img";
-      img.src = `${process.env.FILE_STORE}${obj.id}/${imgs[i]}`;
+      if (typeof imgs[i] == "object") {
+        img.src = PdfIcon;
+        img.setAttribute("extension", imgs[i].ext);
+        img.setAttribute("id", imgs[i].id);
+        img.setAttribute(
+          "data-src",
+          `${process.env.FILE_STORE}${obj.id}/${imgs[i].id}`
+        );
+        console.log(imgs[i]);
+      } else {
+        img.src = `${process.env.FILE_STORE}${obj.id}/${imgs[i]}`;
+      }
       ImgsContainer.appendChild(img);
     }
   } else {

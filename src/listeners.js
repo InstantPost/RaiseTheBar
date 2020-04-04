@@ -31,7 +31,7 @@ document.querySelector("body").addEventListener("click", (event) => {
     CloseModal();
   }
   if (target.classList.contains("obj_img")) {
-    ViewImg(target.getAttribute("src"));
+    ViewImg(target);
   }
   if (target.classList.contains("navbar-item")) {
     const tab = target.getAttribute("data-href");
