@@ -7,9 +7,9 @@ export function printers() {
   OpenModal(FormHTML);
   grecaptcha.render(document.getElementById("captcha"), {
     sitekey: process.env.CAPTCHA_KEY,
-    callback: VerifyCaptch
+    callback: VerifyCaptch,
   });
-  id("form_container").addEventListener("submit", event => {
+  id("form_container").addEventListener("submit", (event) => {
     event.preventDefault();
 
     let data = {
@@ -18,6 +18,7 @@ export function printers() {
       phone: id("phone").value,
       city: id("city").value,
       city_pin: id("city_pin").value,
+      category: id("form_dropdown").value,
       description: id("description").value,
       public_data: {
         name: id("name_pref").checked,
@@ -25,8 +26,8 @@ export function printers() {
         phone: id("phone_pref").checked,
         city: id("city_pref").checked,
         city_pin: id("city_pin_pref").checked,
-        description: id("desc_pref").checked
-      }
+        description: id("desc_pref").checked,
+      },
     };
     let form = new FormData();
     form.append("data", JSON.stringify(data));
@@ -46,9 +47,9 @@ export function printers() {
     id("submit").classList += " is-loading";
     fetch(process.env.BACKEND_URI + "printer/", {
       method: "post",
-      body: form
+      body: form,
     })
-      .then(response => {
+      .then((response) => {
         if (response.status == 200) {
           id("submit").classList = "button is-success";
           id("submit").innerHTML = `<span class="icon is-small">
@@ -62,35 +63,11 @@ export function printers() {
           throw "Error";
         }
       })
-      .then(json => {
+      .then((json) => {
         AddObj(json.data, "printers_data", "printer");
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
       });
-    /*GenericPost(process.env.BACKEND_URI + "volunteer", {
-      name: id("name").value,
-      email: id("email").value,
-      phone: id("phone").value,
-      type: id("volunteer_type").value,
-      city: id("city").value,
-      city_pin: id("city_pin").value,
-      description: id("description").value,
-      public_data: {
-        name: id("name_pref").checked,
-        email: id("email_pref").checked,
-        phone: id("phone_pref").checked,
-        city: id("city_pref").checked,
-        city_pin: id("city_pin_pref").checked
-      }
-    }).then(response => {
-      if (response.status == 200) {
-        id("volunteer_submit").classList = "button is-success";
-        id("volunteer_submit").innerHTML = `<span class="icon is-small">
-            <i class="fas fa-check"></i>
-         </span>
-        <span>Saved</span>`;
-      }
-    });*/
   });
 }

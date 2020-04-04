@@ -7,9 +7,9 @@ export function commodities() {
   OpenModal(FormHTML);
   grecaptcha.render(document.getElementById("captcha"), {
     sitekey: process.env.CAPTCHA_KEY,
-    callback: VerifyCaptch
+    callback: VerifyCaptch,
   });
-  id("form_container").addEventListener("submit", event => {
+  id("form_container").addEventListener("submit", (event) => {
     event.preventDefault();
 
     let data = {
@@ -18,6 +18,7 @@ export function commodities() {
       phone: id("phone").value,
       city: id("city").value,
       city_pin: id("city_pin").value,
+      category: id("form_dropdown").value,
       description: id("description").value,
       public_data: {
         name: id("name_pref").checked,
@@ -25,8 +26,8 @@ export function commodities() {
         phone: id("phone_pref").checked,
         city: id("city_pref").checked,
         city_pin: id("city_pin_pref").checked,
-        description: id("desc_pref").checked
-      }
+        description: id("desc_pref").checked,
+      },
     };
     let form = new FormData();
     form.append("data", JSON.stringify(data));
@@ -46,9 +47,9 @@ export function commodities() {
     id("submit").classList += " is-loading";
     fetch(process.env.BACKEND_URI + "commodity/", {
       method: "post",
-      body: form
+      body: form,
     })
-      .then(response => {
+      .then((response) => {
         if (response.status == 200) {
           id("submit").classList = "button is-success";
           id("submit").innerHTML = `<span class="icon is-small">
@@ -61,11 +62,11 @@ export function commodities() {
           alert("There was some problem please check after some time");
         }
       })
-      .then(json => {
+      .then((json) => {
         console.log(json);
         AddObj(json.data, "commodities_data", "commodity");
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
       });
   });
