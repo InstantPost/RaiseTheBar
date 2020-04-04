@@ -6,7 +6,7 @@ export function ViewImg(element) {
     a.style.display = "none";
     a.href = element.getAttribute("data-src");
     a.download =
-      element.getAttribute("id") + "." + element.getAttribute("exctension");
+      element.getAttribute("id") + "." + element.getAttribute("extension");
     a.target = "_blank";
     document.body.appendChild(a);
     a.click();
