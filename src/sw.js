@@ -7,11 +7,12 @@ if (workbox) {
   workbox.core.clientsClaim();
   console.log(workbox.stategies, workbox);
   console.log(`Yay! Workbox is loaded 🎉`);
+
   workbox.routing.registerRoute(
-    new RegExp(".+/(volunteer|doctor|printer|commodity)/.+"),
-    new workbox.strategies.NetworkFirst({
+    new RegExp(".+/pincode/.+"),
+    new workbox.strategies.CacheFirst({
       networkTimeoutSeconds: 3,
-      cacheName: "network_cache",
+      cacheName: "pincode_cache",
     })
   );
   workbox.routing.registerRoute(
