@@ -47,7 +47,7 @@ window.onload = (e) => {
 };
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
-    .register(`/covid/sw.js?${Math.random()}`)
+    .register(`/raisethebar/sw.js?${Math.random()}`)
     .then((registration) => {
       console.log("SW registered: ", registration);
     })

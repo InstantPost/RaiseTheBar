@@ -16,6 +16,20 @@ if (workbox) {
     })
   );
   workbox.routing.registerRoute(
+    new RegExp("https://use.fontawesome.com/releases/v5.7.0/css/all.css"),
+    new workbox.strategies.CacheFirst({
+      networkTimeoutSeconds: 3,
+      cacheName: "libraries_cache",
+    })
+  );
+  workbox.routing.registerRoute(
+    new RegExp("https://www.google.com/recaptcha/api.js"),
+    new workbox.strategies.CacheFirst({
+      networkTimeoutSeconds: 3,
+      cacheName: "libraries_cache",
+    })
+  );
+  workbox.routing.registerRoute(
     new RegExp(".+/covid_img_store/.+"),
     new workbox.strategies.CacheFirst({
       cacheName: "uploaded_image_cache",

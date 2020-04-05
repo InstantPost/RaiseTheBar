@@ -27,7 +27,7 @@ export function InitGeoInput(container_id) {
               let area = obj.data.office_name;
               area = area.split(" ");
               area.pop();
-              area = area.join(" ");
+              area = area.join(" ") + ", " + obj.data.district;
               option.value = area;
               option.innerText = area;
               select.appendChild(option);
