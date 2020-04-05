@@ -19,7 +19,7 @@ export function commodities() {
       email: id("email").value,
       phone: id("phone").value,
       city: id("city").value,
-      city_pin: id("city_pin").value,
+      city_pin: id("zipcode").value,
       category: id("form_dropdown").value,
       description: id("description").value,
       public_data: {
