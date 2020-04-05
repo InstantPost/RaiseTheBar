@@ -5,7 +5,7 @@ export function InitGeoInput(container_id) {
   div.classList = "columns is-multiline is-mobile";
   div.innerHTML = Template;
   id(container_id).prepend(div);
-  id("city_pin").addEventListener("input", (event) => {
+  id("zipcode").addEventListener("input", (event) => {
     const value = event.target.value;
     if (value.length == 6) {
       fetch(process.env.PINCODE_API + value + "/")
