@@ -43,22 +43,22 @@
                         <div id="navMenu" class="navbar-menu transparent">
                             <div class="navbar-end">
                                 <div class="navbar-item">
-                                    <a data-href="#doctors" class=" navbar-item is-white has-text-grey">
+                                    <a data-href="doctor" class=" navbar-item is-white has-text-grey">
                                         Doctors
                                     </a>
-                                    <a data-href="#printers" class=" navbar-item is-white has-text-grey">
+                                    <a data-href="printer" class=" navbar-item is-white has-text-grey">
                                         3D-Printers
                                     </a>
-                                    <a data-href="#requirements" class=" navbar-item is-white has-text-grey">
+                                    <a data-href="requirement" class=" navbar-item is-white has-text-grey">
                                         Requirements
                                     </a>
-                                    <a data-href="#manufacturers" class=" navbar-item is-white has-text-grey">
+                                    <a data-href="manufacturer" class=" navbar-item is-white has-text-grey">
                                         Manufacturers
                                     </a>
-                                    <a data-href="#commodities" class=" navbar-item is-white has-text-grey">
+                                    <a data-href="commodity" class=" navbar-item is-white has-text-grey">
                                         Commodities
                                     </a>
-                                    <a data-href="#volunteers" class=" navbar-item is-white has-text-grey">
+                                    <a data-href="volunteer" class=" navbar-item is-white has-text-grey">
                                         Volunteers
                                     </a>
                                 </div>
@@ -93,7 +93,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab active " id="doctors">
+                <div class="search_bar">
+                    <div class=" field has-addons">
+                        <div class="control has-icons-left">
+                            <input id="search_input" data-entity="doctor" class="search_bar_input input" type="text"
+                                placeholder="Find by Pincode or City">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab active " id="doctor">
                     <button id="doctor_init" class="button is-primary is-pulled-right fixed">Add</button>
                     <div class="data-wrapper
                     ">
@@ -102,7 +113,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab " id="requirements">
+                <div class="tab " id="requirement">
+
                     <button id="requirement_init" class="button is-primary is-pulled-right fixed">Add</button>
                     <div class="data-wrapper
                                     ">
@@ -111,7 +123,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab " id="manufacturers">
+                <div class="tab " id="manufacturer">
                     <button id="manufacturer_init" class="button is-primary is-pulled-right fixed">Add</button>
                     <div class="data-wrapper
                                     ">
@@ -120,7 +132,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab " id="printers">
+                <div class="tab " id="printer">
                     <button id="printer_init" class="button is-primary is-pulled-right fixed">Add</button>
                     <div class="data-wrapper
                                         ">
@@ -130,7 +142,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab " id="commodities">
+                <div class="tab " id="commodity">
                     <button id="commodity_init" class="button is-primary is-pulled-right fixed">Add</button>
                     <div class="data-wrapper">
                         <div class="data-container " id="">
@@ -138,7 +150,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab " id="volunteers">
+                <div class="tab " id="volunteer">
                     <br>
                     <div id="vol_prompt" class="volunteer-btn-container notification is-primary is-light">
                         <span class="title is-5">

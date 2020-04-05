@@ -22,10 +22,45 @@ if (workbox) {
     })
   );
   workbox.routing.registerRoute(
-    new RegExp(".+/(volunteer|doctor|printer|commodity)/"),
+    new RegExp(".+/volunteer/"),
     new workbox.strategies.NetworkFirst({
       networkTimeoutSeconds: 3,
-      cacheName: "network_cache",
+      cacheName: "volunteer_cache",
+    })
+  );
+  workbox.routing.registerRoute(
+    new RegExp(".+/doctor/"),
+    new workbox.strategies.NetworkFirst({
+      networkTimeoutSeconds: 3,
+      cacheName: "doctor_cache",
+    })
+  );
+  workbox.routing.registerRoute(
+    new RegExp(".+/commodity/"),
+    new workbox.strategies.NetworkFirst({
+      networkTimeoutSeconds: 3,
+      cacheName: "commodity_cache",
+    })
+  );
+  workbox.routing.registerRoute(
+    new RegExp(".+/volunteer/"),
+    new workbox.strategies.NetworkFirst({
+      networkTimeoutSeconds: 3,
+      cacheName: "volunteer_cache",
+    })
+  );
+  workbox.routing.registerRoute(
+    new RegExp(".+/printer/"),
+    new workbox.strategies.NetworkFirst({
+      networkTimeoutSeconds: 3,
+      cacheName: "printer_cache",
+    })
+  );
+  workbox.routing.registerRoute(
+    new RegExp(".+/manufacturer/"),
+    new workbox.strategies.NetworkFirst({
+      networkTimeoutSeconds: 3,
+      cacheName: "manufacturer_cache",
     })
   );
   workbox.precaching.precacheAndRoute(self.__WB_MANIFEST);

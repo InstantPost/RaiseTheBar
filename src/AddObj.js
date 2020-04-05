@@ -5,6 +5,8 @@ import PdfIcon from "./assets/pdf_logo.png";
 export function AddObj(obj, target, entity) {
   id(target).innerHTML += "";
   let row = document.createElement("div");
+  row.id = obj.id;
+  row.setAttribute("data-entity", entity);
   row.classList = "data-row box";
   row.innerHTML = Template;
   const date = new Date(obj.created);
@@ -31,14 +33,14 @@ export function AddObj(obj, target, entity) {
   }</span>
             </div>
             <div>
-                <span data=${entity}  class="link filter_table_data ${
+                <span data-specific="region" data=${entity}  class="link filter_table_data ${
     obj.data.public_data["city"] ? "" : "obj_data_private"
   }" data-filter-by="city">${
     obj.data.public_data["city"] ? obj.data.city : "City not disclosed"
   }</span>
             </div>
             <div>
-                <span data=${entity} class="link filter_table_data ${
+                <span data-specific="pincode" data=${entity} class="link filter_table_data  ${
     obj.data.public_data["city_pin"] ? "" : "obj_data_private"
   }" data-filter-by="city_pin">${
     obj.data.public_data["city_pin"]

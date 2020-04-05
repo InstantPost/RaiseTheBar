@@ -9,6 +9,8 @@ import { doctor } from "./DoctorsForm";
 import { CloseModal } from "./Modal";
 import { ViewImg } from "./ImgViewer";
 import { filter } from "./FilterData";
+import { search } from "./SearchBar";
+id("search_input").addEventListener("input", search);
 id("order_init").addEventListener("click", order);
 id("doctor_init").addEventListener("click", doctor);
 id("volunteer_init").addEventListener("click", volunteer);
@@ -47,7 +49,8 @@ document.querySelector("body").addEventListener("click", (event) => {
     Array.from(cls("tab")).forEach((el) => {
       el.classList.remove("active");
     });
-    document.querySelector(tab).classList += " active";
+    id("search_input").setAttribute("data-entity", tab);
+    document.querySelector(`#${tab}`).classList += " active";
     document.querySelector(".burger").click();
   }
 });

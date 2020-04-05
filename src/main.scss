@@ -11,6 +11,7 @@
   right: 55px;
 }
 #modal {
+  z-index: 101;
   #form_container {
     border-radius: 0px !important;
   }
@@ -70,6 +71,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .filter-data-container {
   border-radius: 0px;
+
   .filter_table_data {
     color: #4a4a4a !important;
     pointer-events: none;
@@ -113,6 +115,16 @@ input[type="number"]::-webkit-outer-spin-button {
     max-width: 55px;
   }
 }
+.search_bar {
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  top: 55px;
+  z-index: 100;
+  padding: 10px;
+  width: 100%;
+  background: white;
+}
 .data-wrapper {
   width: 100%;
   .data-container {
@@ -136,7 +148,7 @@ input[type="number"]::-webkit-outer-spin-button {
           max-width: 320px;
         }
       }
-      @media (max-width: 468px) {
+      @media (max-width: 368px) {
         .data-row {
           max-width: 255px;
         }
