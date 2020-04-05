@@ -11,7 +11,7 @@
   right: 55px;
 }
 #modal {
-  z-index: 101;
+  z-index: 101 !important;
   #form_container {
     border-radius: 0px !important;
   }
