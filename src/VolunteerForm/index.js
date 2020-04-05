@@ -3,8 +3,10 @@ import { OpenModal, CloseModal } from "../Modal";
 import FormHTML from "./index.html";
 import { AddObj } from "../AddObj";
 import { VerifyCaptch } from "../Captcha";
+import { InitGeoInput } from "../GeoInputComponent";
 export function volunteer() {
   OpenModal(FormHTML);
+  InitGeoInput("geo_input");
   grecaptcha.render(document.getElementById("captcha"), {
     sitekey: process.env.CAPTCHA_KEY,
     callback: VerifyCaptch,

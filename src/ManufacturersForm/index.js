@@ -1,10 +1,10 @@
 import { id } from "../selectors";
 import { OpenModal, CloseModal } from "../Modal";
-import { AddObj } from "../AddObj";
 import FormHTML from "./index.html";
+import { AddObj } from "../AddObj";
 import { VerifyCaptch } from "../Captcha";
 import { InitGeoInput } from "../GeoInputComponent";
-export function printers() {
+export function manufacturer() {
   OpenModal(FormHTML);
   InitGeoInput("geo_input");
   grecaptcha.render(document.getElementById("captcha"), {
@@ -46,7 +46,7 @@ export function printers() {
     if (id("form_container").classList.contains("submitted")) return;
     id("form_container").classList.add("submitted");
     id("submit").classList += " is-loading";
-    fetch(process.env.BACKEND_URI + "printer/", {
+    fetch(process.env.BACKEND_URI + "manufacturer/", {
       method: "post",
       body: form,
     })
@@ -65,7 +65,8 @@ export function printers() {
         }
       })
       .then((json) => {
-        AddObj(json.data, "printers_data", "printer");
+        console.log(json);
+        AddObj(json.data, "manufacturers_data", "manufacturer");
       })
       .catch((err) => {
         console.log(err);

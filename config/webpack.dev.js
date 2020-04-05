@@ -2,18 +2,19 @@ const path = require("path");
 const merge = require("webpack-merge");
 const common = require("./webpack.common.js");
 const Webpack = require("webpack");
+console.log("Hi");
 module.exports = merge(common, {
   mode: "development",
   devtool: "cheap-eval-source-map",
   output: {
-    chunkFilename: "js/[name].chunk.js"
+    chunkFilename: "js/[name].chunk.js",
   },
   devServer: {
-    inline: true
+    inline: true,
   },
   plugins: [
     new Webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify("development")
-    })
-  ]
+      "process.env.NODE_ENV": JSON.stringify("development"),
+    }),
+  ],
 });

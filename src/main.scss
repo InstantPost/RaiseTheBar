@@ -10,6 +10,11 @@
   top: 16px;
   right: 55px;
 }
+#modal {
+  #form_container {
+    border-radius: 0px !important;
+  }
+}
 #order_init {
   pointer-events: none;
 }
@@ -66,7 +71,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .filter-data-container {
   border-radius: 0px;
   .filter_table_data {
-    color: black !important;
+    color: #4a4a4a !important;
     pointer-events: none;
   }
 }

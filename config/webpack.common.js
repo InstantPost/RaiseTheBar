@@ -5,13 +5,11 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const dotenv = require("dotenv");
 const Webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
 const WebpackPwaManifest = require("webpack-pwa-manifest");
-
 function getEnv() {
   console.log(process.env.NODE_ENV);
   const env = dotenv.config({
-    path: path.join(__dirname, `../.env.${process.env.NODE_ENV}`)
+    path: path.join(__dirname, `../.env.${process.env.NODE_ENV}`),
   }).parsed;
   const envKeys = Object.keys(env).reduce((prev, next) => {
     prev[`process.env.${next}`] = JSON.stringify(env[next]);
@@ -20,6 +18,7 @@ function getEnv() {
   console.log("UPDATED");
   return new Webpack.DefinePlugin(envKeys);
 }
+
 module.exports = {
   entry: { app: path.resolve(__dirname, "../src/index.js") },
   output: {
@@ -27,17 +26,17 @@ module.exports = {
     // .[contentHash].
     filename: `bundle${
       process.env.NODE_ENV != "development" ? ".[contentHash]." : "."
-    }js`
+    }js`,
   },
   plugins: [
     new CleanWebpackPlugin(),
     new MinifyPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "../src/index.html")
+      template: path.resolve(__dirname, "../src/index.html"),
     }),
     getEnv(),
     new MiniCssExtractPlugin({
-      filename: "css/main.[contentHash].css"
+      filename: "css/main.[contentHash].css",
     }),
     new WebpackPwaManifest({
       name: "",
@@ -48,10 +47,10 @@ module.exports = {
       icons: [
         {
           src: path.resolve("src/assets/mask.png"),
-          sizes: [96, 128, 192, 256, 384, 512] // multiple sizes
-        }
-      ]
-    })
+          sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
+        },
+      ],
+    }),
   ],
   mode: "development",
   module: {
@@ -66,7 +65,7 @@ module.exports = {
           "style-loader",
           MiniCssExtractPlugin.loader,
           {
-            loader: "css-loader"
+            loader: "css-loader",
             // options: {
             //   name: "css/main.[contentHash].css"
             // }
@@ -74,19 +73,19 @@ module.exports = {
           {
             loader: "sass-loader",
             options: {
-              sourceMap: true
-            }
-          }
-        ]
+              sourceMap: true,
+            },
+          },
+        ],
       },
       {
         test: /\.(html)$/,
         use: {
-          loader: "html-loader"
+          loader: "html-loader",
           // options: {
           //   attrs: [":data-src"]
           // }
-        }
+        },
       },
       {
         test: /\.m?js$/,
@@ -99,20 +98,20 @@ module.exports = {
                 "@babel/preset-env",
                 {
                   targets: {
-                    esmodules: true
-                  }
-                }
-              ]
+                    esmodules: true,
+                  },
+                },
+              ],
             ],
             plugins: [
               "transform-async-to-generator",
               "@babel/plugin-transform-arrow-functions",
               "@babel/plugin-transform-template-literals",
-              "@babel/plugin-transform-classes"
+              "@babel/plugin-transform-classes",
             ],
-            sourceType: "unambiguous"
-          }
-        }
+            sourceType: "unambiguous",
+          },
+        },
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
@@ -122,22 +121,22 @@ module.exports = {
             loader: "image-webpack-loader",
             options: {
               optipng: {
-                enabled: false
+                enabled: false,
               },
               pngquant: {
                 quality: [0.65, 0.9],
-                speed: 4
-              }
-            }
-          }
-        ]
-      }
-    ]
+                speed: 4,
+              },
+            },
+          },
+        ],
+      },
+    ],
   },
   devServer: {
     // port: 8080,
     // contentBase: ["./src", "./dist"], // both src and output dirs
-    inline: true
+    inline: true,
     // hot: true
-  }
+  },
 };

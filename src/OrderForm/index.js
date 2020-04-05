@@ -1,10 +1,9 @@
 import { id } from "../selectors";
 import { OpenModal, CloseModal } from "../Modal";
-import { GenericPost } from "../network";
 import FormHTML from "./index.html";
 export function order() {
   OpenModal(FormHTML);
-  id("form_container").addEventListener("submit", event => {
+  id("form_container").addEventListener("submit", (event) => {
     event.preventDefault();
     if (id("form_container").classList.contains("submitted")) return;
     id("form_container").classList.add("submitted");
@@ -21,9 +20,9 @@ export function order() {
         email: id("email_pref").checked,
         phone: id("phone_pref").checked,
         city: id("city_pref").checked,
-        city_pin: id("city_pin_pref").checked
-      }
-    }).then(response => {
+        city_pin: id("city_pin_pref").checked,
+      },
+    }).then((response) => {
       if (response.status == 200) {
         id("submit").classList = "button is-success";
         id("submit").innerHTML = `<span class="icon is-small">

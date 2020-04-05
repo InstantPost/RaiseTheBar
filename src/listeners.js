@@ -3,6 +3,8 @@ import { order } from "./OrderForm";
 import { volunteer } from "./VolunteerForm";
 import { commodities } from "./CommoditiesForm";
 import { printers } from "./PrintersForm";
+import { requirement } from "./RequirementsForm";
+import { manufacturer } from "./ManufacturersForm";
 import { doctor } from "./DoctorsForm";
 import { CloseModal } from "./Modal";
 import { ViewImg } from "./ImgViewer";
@@ -12,6 +14,8 @@ id("doctor_init").addEventListener("click", doctor);
 id("volunteer_init").addEventListener("click", volunteer);
 id("commodity_init").addEventListener("click", commodities);
 id("printer_init").addEventListener("click", printers);
+id("requirement_init").addEventListener("click", requirement);
+id("manufacturer_init").addEventListener("click", manufacturer);
 document.querySelector("body").addEventListener("wheel", (event) => {
   const target = event.target;
   if (target.classList.contains("obj_img")) {
