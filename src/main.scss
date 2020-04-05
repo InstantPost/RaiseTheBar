@@ -4,6 +4,12 @@
 .navbar-item.has-dropdown .navbar-dropdown {
   display: none;
 }
+.active-tab-link {
+  background: #fafafa;
+}
+#search_input_container {
+  display: none;
+}
 #refresh {
   color: #333333;
   position: relative;
@@ -120,7 +126,7 @@ input[type="number"]::-webkit-outer-spin-button {
   justify-content: flex-end;
   position: sticky;
   top: 55px;
-  z-index: 100;
+  z-index: 2;
   padding: 10px;
   width: 100%;
   background: white;
