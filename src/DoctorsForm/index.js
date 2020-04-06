@@ -7,7 +7,7 @@ import { InitGeoInput } from "../GeoInputComponent";
 export function doctor() {
   OpenModal(FormHTML);
   InitGeoInput("geo_input");
-  grecaptcha.render(document.getElementById("captcha"), {
+  grecaptcha.render(id("captcha"), {
     sitekey: process.env.CAPTCHA_KEY,
     callback: VerifyCaptch,
   });
@@ -32,6 +32,7 @@ export function doctor() {
     };
     let form = new FormData();
     form.append("data", JSON.stringify(data));
+    form.append("captcha_response", id("captcha").getAttribute("response"));
     const num_images = document.getElementById("images").files.length;
     console.log(num_images);
     if (num_images > 10) {
@@ -59,6 +60,9 @@ export function doctor() {
         <span>Saved</span>`;
           setTimeout(CloseModal, 1500);
           return response.json();
+        } else if (response.status == 408) {
+          alert(response.statusText);
+          throw "Error";
         } else {
           alert("There was some problem please check after some time");
           throw "Error";

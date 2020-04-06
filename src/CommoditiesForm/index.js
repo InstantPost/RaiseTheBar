@@ -33,6 +33,7 @@ export function commodities() {
     };
     let form = new FormData();
     form.append("data", JSON.stringify(data));
+    form.append("captcha_response", id("captcha").getAttribute("response"));
     const num_images = document.getElementById("images").files.length;
     console.log(num_images);
     if (num_images > 10) {
