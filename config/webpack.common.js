@@ -39,15 +39,15 @@ module.exports = {
       filename: "css/main.[contentHash].css",
     }),
     new WebpackPwaManifest({
-      name: "",
-      short_name: "",
-      description: "",
+      name: "RaiseTheBar",
+      short_name: "RTB",
+      description: "Raise the bar placeholder",
       background_color: "#ffffff",
-      crossorigin: "use-credentials", //can be null, use-credentials or anonymous
+      crossorigin: "use-credentials",
       icons: [
         {
-          src: path.resolve("src/assets/mask.png"),
-          sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
+          src: path.resolve("android-chrome-192x192.png"),
+          sizes: [96, 128, 192, 256, 384, 512],
         },
       ],
     }),
