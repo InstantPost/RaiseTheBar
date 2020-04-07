@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --config config/webpack.dev.js",
-    "dev-build": "NODE_ENV=dev-build webpack --config config/webpack.prod.js --colors",
-    "build": "NODE_ENV=production webpack --config config/webpack.prod.js  --colors ; ",
-    "server-build": "NODE_ENV=serverproduction webpack --config config/webpack.prod.js --colors"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.dev.js",
+    "dev-build": "cross-env NODE_ENV=dev-build webpack --config config/webpack.prod.js --colors",
+    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js  --colors ; ",
+    "server-build": "cross-env NODE_ENV=serverproduction webpack --config config/webpack.prod.js --colors"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -22,6 +22,7 @@
     "babel-preset-env": "^1.7.0",
     "bulma": "^0.8.1",
     "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
     "css-loader": "^3.4.2",
     "dotenv": "^8.2.0",
     "html-loader": "^0.5.5",
