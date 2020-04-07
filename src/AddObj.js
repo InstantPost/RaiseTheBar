@@ -7,17 +7,18 @@ export function AddObj(obj, target, entity) {
   let row = document.createElement("div");
   row.id = obj.id;
   row.setAttribute("data-entity", entity);
-  row.classList = "data-row box";
+  row.classList = "data-row box databox";
   row.innerHTML = Template;
   const date = new Date(obj.created);
+  row.querySelector(".obj-category").innerHTML =
+    "category" in obj.data ? obj.data.category : "";
   row.getElementsByClassName("obj-details-table")[0].innerHTML += `
             <div>
                 <span class="filter_table_data obj_data_private">${
                   obj.data.name
                 }</span>
             </div>
-            <div>
-            ${"category" in obj.data ? obj.data.category + "<br>" : ""}</div>
+            
             <div>
                 <span data=${entity} data-filter-by="email" class="link filter_table_data ${
     obj.data.public_data["email"] ? "" : "obj_data_private"
