@@ -7,7 +7,7 @@ export function AddObj(obj, target, entity) {
   let row = document.createElement("div");
   row.id = obj.id;
   row.setAttribute("data-entity", entity);
-  row.classList = "data-row box";
+  row.classList = "data-row box databox";
   row.innerHTML = Template;
   const date = new Date(obj.created);
   row.querySelector(".obj-category").innerHTML =
