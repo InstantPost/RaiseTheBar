@@ -9,6 +9,7 @@ import { LoadDoctors } from "./Doctors";
 import { LoadRequirements } from "./Requirements";
 import { LoadManufacturers } from "./Manufacturers";
 import { uuid } from "./utils/uuid";
+import { ExpandView } from "./ExpandView"
 window.onload = (e) => {
   LoadVolunteers();
   LoadCommodities();
@@ -16,6 +17,7 @@ window.onload = (e) => {
   LoadDoctors();
   LoadRequirements();
   LoadManufacturers();
+  ExpandView();
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       (position) => {
