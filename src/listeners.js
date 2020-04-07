@@ -56,3 +56,11 @@ document.querySelector("body").addEventListener("click", (event) => {
     document.querySelector(".burger").click();
   }
 });
+
+document.querySelector("body").addEventListener("mouseover", (event) => {
+  const target = event.target;
+  if (target.classList.contains("link")) {
+    var text = event.target.innerText
+    target.setAttribute('title',text)
+  }
+});

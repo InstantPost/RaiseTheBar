@@ -196,7 +196,6 @@ input[type="number"]::-webkit-outer-spin-button {
     }
     .link {
       color: $link;
-      word-break: break-all;
     }
     .link:hover {
       text-decoration: underline;
@@ -219,6 +218,7 @@ input[type="number"]::-webkit-outer-spin-button {
     }
     .obj-details-table div {
       padding: 3px;
+      overflow: hidden;
     }
     .child {
       background: blue;
