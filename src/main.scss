@@ -236,3 +236,31 @@ input[type="number"]::-webkit-outer-spin-button {
     text-decoration: underline;
   }
 }
+
+//For Popup
+.databox:hover{
+  box-shadow: 2px 2px 4px 2px #666 !important;
+}
+
+.databox:active{
+  box-shadow: 1px 1px 2px 2px #333 !important;
+}
+
+.innerpop{
+  background-color: white;
+  padding:2em;
+  .columns{
+    flex-direction: column;
+    align-items: center;
+    .obj-details-photos{
+      width: 80%;
+    }
+  }
+  pre{
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  }
+}
