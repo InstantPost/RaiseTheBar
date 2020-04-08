@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --config config/webpack.dev.js",
-    "dev-build": "NODE_ENV=dev-build webpack --config config/webpack.prod.js --colors",
-    "build": "NODE_ENV=production webpack --config config/webpack.prod.js  --colors ; ",
-    "server-build": "NODE_ENV=serverproduction webpack --config config/webpack.prod.js --colors"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.dev.js",
+    "dev-build": "cross-env NODE_ENV=dev-build webpack --config config/webpack.prod.js --colors",
+    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js  --colors ; ",
+    "server-build": "cross-env NODE_ENV=serverproduction webpack --config config/webpack.prod.js --colors"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
