@@ -2,7 +2,7 @@ export function ActVol()
 {
     var addhere = document.getElementById("activevol")
     var request = new XMLHttpRequest()
-    var listofid='1a6da233-abb8-482f-a72e-e113a7fec8b6,b88b767d-b851-45ca-a171-b17dfa328e35'
+    var listofid=''
     request.open('GET', 'https://dev.instantpost.org/covid/api/volunteer/?id='+listofid, true)
     request.onload = function() {
     var data = JSON.parse(this.response)
@@ -17,11 +17,11 @@ export function ActVol()
                     </div>
                     <div class="column is-half obj-details-table">
                         <div class="obj-created-time is-pulled-right" style="position: relative;bottom:5px">${p.created.slice(0,10)}</div>
-                    
+
                             <div>
                                 <span class="filter_table_data obj_data_private">${p.data.public_data.name?p.data.name:"Name Not Disclosed"}</span>
                             </div>
-                            
+
                             <div>
                                 <span data="volunteer" data-filter-by="email" class="link filter_table_data ">${p.data.public_data.email?p.data.email:"Email Not Disclosed"}</span>
                             </div>
@@ -41,7 +41,7 @@ export function ActVol()
                 </div></div>`
                 addhere.innerHTML+=htmlstring;
               })
-        } 
+        }
         else {
             console.log('error')
         }
