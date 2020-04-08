@@ -11,7 +11,6 @@ import { ViewImg } from "./ImgViewer";
 import { filter } from "./FilterData";
 import { search } from "./SearchBar";
 id("search_input").addEventListener("input", search);
-id("order_init").addEventListener("click", order);
 id("doctor_init").addEventListener("click", doctor);
 id("volunteer_init").addEventListener("click", volunteer);
 id("commodity_init").addEventListener("click", commodities);
@@ -60,7 +59,7 @@ document.querySelector("body").addEventListener("click", (event) => {
 document.querySelector("body").addEventListener("mouseover", (event) => {
   const target = event.target;
   if (target.classList.contains("link")) {
-    var text = event.target.innerText
-    target.setAttribute('title',text)
+    var text = event.target.innerText;
+    target.setAttribute("title", text);
   }
 });
