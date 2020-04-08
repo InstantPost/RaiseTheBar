@@ -189,6 +189,7 @@ input[type="number"]::-webkit-outer-spin-button {
     .obj_data_private {
       color: #4a4a4a !important;
       pointer-events: none;
+      font-weight: bold;
     }
     .obj_data_private:hover {
       text-decoration: none;
@@ -196,7 +197,6 @@ input[type="number"]::-webkit-outer-spin-button {
     }
     .link {
       color: $link;
-      word-break: break-all;
     }
     .link:hover {
       text-decoration: underline;
@@ -219,6 +219,7 @@ input[type="number"]::-webkit-outer-spin-button {
     }
     .obj-details-table div {
       padding: 3px;
+      overflow: hidden;
     }
     .child {
       background: blue;
@@ -264,4 +265,109 @@ input[type="number"]::-webkit-outer-spin-button {
     white-space: -o-pre-wrap;    /* Opera 7 */
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
   }
+}
+
+//Graph styles
+#graphs
+{
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content:center;
+	align-items: stretch;
+	
+}
+
+.graphbox
+{
+
+	border-style: solid;
+	border-radius:4px;
+	border-width:thin;
+	text-align: center;
+	vertical-align: middle;
+	height:8em;
+	width:8em;
+	margin:0.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.graph div
+{
+
+	margin: auto;
+	height:100%;
+
+}
+
+.graphnumbers
+{
+
+	font-weight:bold;
+	font-size:1.3em;
+
+}
+
+#graph-confirmed
+{
+
+	color:#f33;
+	border-color:#f33;
+
+}
+
+#graph-active
+{
+
+	color:#0bf;
+	border-color:#0bf;
+
+}
+
+#graph-recovered
+{
+
+	color:#3d0;
+	border-color:#3d0;
+
+}
+#graph-1
+{
+
+	color:#5f0;
+	border-color:#5f0;
+
+}
+#graph-2
+{
+
+	color:#f08;
+	border-color:#f08;
+
+}
+#graph-3
+{
+
+	color:#0fa;
+	border-color:#0fa;
+
+}
+#graph-4
+{
+
+	color:#0bf;
+	border-color:#0bf;
+
+}
+
+#graph-dead
+{
+
+	color:#555;
+	border-color:#555;
+
 }
