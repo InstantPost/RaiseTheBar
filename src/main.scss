@@ -256,6 +256,8 @@ input[type="number"]::-webkit-outer-spin-button {
     align-items: center;
     .obj-details-photos{
       width: 80%;
+      display: flex;
+      overflow: auto;
     }
   }
   pre{
