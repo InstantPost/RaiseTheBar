@@ -275,18 +275,15 @@ input[type="number"]::-webkit-outer-spin-button {
 //Graph styles
 #graphs
 {
-
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content:center;
 	align-items: stretch;
-	
 }
 
 .graphbox
 {
-
 	border-style: solid;
 	border-radius:4px;
 	border-width:thin;
@@ -298,83 +295,12 @@ input[type="number"]::-webkit-outer-spin-button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
-}
-
-.graph div
-{
-
-	margin: auto;
-	height:100%;
-
 }
 
 .graphnumbers
 {
-
 	font-weight:bold;
 	font-size:1.3em;
-
-}
-
-#graph-confirmed
-{
-
-	color:#f33;
-	border-color:#f33;
-
-}
-
-#graph-active
-{
-
-	color:#0bf;
-	border-color:#0bf;
-
-}
-
-#graph-recovered
-{
-
-	color:#3d0;
-	border-color:#3d0;
-
-}
-#graph-1
-{
-
-	color:#5a0;
-	border-color:#5a0;
-
-}
-#graph-2
-{
-
-	color:#a68;
-	border-color:#a68;
-
-}
-#graph-3
-{
-
-	color:#0aa;
-	border-color:#0aa;
-
-}
-#graph-4
-{
-
-	color:#47f;
-	border-color:#47f;
-
-}
-
-#graph-dead
-{
-
-	color:#555;
-	border-color:#555;
-
 }
 
 .modal-content{
