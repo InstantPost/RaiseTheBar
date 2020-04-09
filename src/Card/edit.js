@@ -1,6 +1,14 @@
 import { Authenticate } from "../Auth";
+import { id } from "../selectors";
+
+function edit(selector) {
+  const entity = id(selector).getAttribute("data-entity");
+  console.log(entity);
+}
 export function EditCard(element) {
-  if (!isAuthenticated()) {
-    console.log("Not auth");
-  }
+  const AuthPhone = element.getAttribute("data-auth");
+  Authenticate(AuthPhone, {
+    func: edit,
+    args: element.getAttribute("data-id"),
+  });
 }

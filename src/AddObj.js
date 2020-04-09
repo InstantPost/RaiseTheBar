@@ -9,12 +9,12 @@ export function AddObj(obj, target, entity) {
   row.setAttribute("data-entity", entity);
   row.classList = "data-row box databox";
   row.innerHTML = Template;
-  row
-    .querySelector(".obj-edit")
-    .setAttribute(
-      "data-auth",
-      obj.data.public_data["phone"] ? obj.data.phone : ""
-    );
+  const EditButton = row.querySelector(".obj-edit");
+  EditButton.setAttribute(
+    "data-auth",
+    obj.data.public_data["phone"] ? obj.data.phone : ""
+  );
+  EditButton.setAttribute("data-id", obj.id);
   const date = new Date(obj.created);
   row.querySelector(".obj-category").innerHTML =
     "category" in obj.data ? obj.data.category : "";

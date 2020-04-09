@@ -5,7 +5,7 @@ import { commodities } from "./CommoditiesForm";
 import { printers } from "./PrintersForm";
 import { requirement } from "./RequirementsForm";
 import { manufacturer } from "./ManufacturersForm";
-import { EditCard, DeleteCard } from "./Card";
+import { EditCard } from "./Card";
 import { doctor } from "./DoctorsForm";
 import { CloseModal } from "./Modal";
 import { ViewImg } from "./ImgViewer";
@@ -41,9 +41,6 @@ document.querySelector("body").addEventListener("click", (event) => {
   }
   if (target.classList.contains("obj-edit")) {
     EditCard(target);
-  }
-  if (target.classList.contains("obj-delete")) {
-    DeleteCard(target);
   }
   if (target.classList.contains("navbar-item")) {
     const tab = target.getAttribute("data-href");
