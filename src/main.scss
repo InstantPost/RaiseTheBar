@@ -123,11 +123,14 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 @media (min-width: 968px) {
   #modal-close {
-    right: 175px;
+    // right: 175px;
     height: 55px !important;
     width: 55px !important;
     max-height: 55px;
     max-width: 55px;
+    // Added for Width
+    background-color: rgba(0,0,0,0.1); 
+    right: 5px;
   }
 }
 .search_bar {
@@ -371,5 +374,17 @@ input[type="number"]::-webkit-outer-spin-button {
 
 	color:#555;
 	border-color:#555;
+
+}
+
+//Added for Width
+
+@media screen and (min-width: 769px){
+
+  .modal-content, .modal-card {
+      margin: 0 auto;
+      max-height: calc(100vh - 40px);
+      width: 90%;
+  }
 
 }
