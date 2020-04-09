@@ -377,6 +377,12 @@ input[type="number"]::-webkit-outer-spin-button {
 
 }
 
+.modal-content{
+  img{
+    width: 80%;
+  }
+}
+
 //Added for Width
 
 @media screen and (min-width: 769px){
@@ -386,5 +392,30 @@ input[type="number"]::-webkit-outer-spin-button {
       max-height: calc(100vh - 40px);
       width: 90%;
   }
+
+  .innerpop{
+    background-color: white;
+    padding:2em;
+    .columns{
+      flex-direction: column;
+      align-items: center;
+      .obj-details-photos{
+        width: 100%;
+        display: flex;
+        overflow: auto;
+        .obj_img{
+          max-width: 35%;
+          padding: 0 10px;
+          margin: auto;
+        }
+      }
+      .column.is-half{
+        width: 100%;
+      }
+    }
+  }
+
+  
+
 
 }
