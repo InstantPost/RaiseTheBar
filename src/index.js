@@ -11,6 +11,7 @@ import { LoadManufacturers } from "./Manufacturers";
 import { uuid } from "./utils/uuid";
 import { ExpandView } from "./ExpandView"
 import { ActVol } from "./ActVol"
+import { Graph } from "./Graph"
 window.onload = (e) => {
   LoadVolunteers();
   LoadCommodities();
@@ -20,6 +21,7 @@ window.onload = (e) => {
   LoadManufacturers();
   ExpandView();
   ActVol();
+  Graph();
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
