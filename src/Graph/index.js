@@ -12,13 +12,13 @@ export function Graph()
             color :"#0BF"
         },
         {
-            name :"Total Build Surface Area",
-            number :"665400 (sq mm)",
+            name :"Individuals",
+            number :"10",
             color :"#F33"
         },
         {
-            name :"Max Frames per minute",
-            number :"0.2",
+            name :"Time to print",
+            number :"5 minutes",
             color :"#5A0"
         },
         {
@@ -33,12 +33,12 @@ export function Graph()
         },
         {
             name :"Face Shields Manufactured",
-            number :204,
+            number :419,
             color :"#47F"
         },
         {
             name :"Shields Donated",
-            number :50,
+            number :180,
             color :"#555"
         }
     ]
