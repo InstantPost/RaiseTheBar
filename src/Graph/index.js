@@ -33,7 +33,7 @@ export function Graph()
         },
         {
             name :"Face Shields Manufactured",
-            number :419,
+            number :569,
             color :"#47F"
         },
         {
