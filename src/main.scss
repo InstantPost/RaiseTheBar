@@ -1,6 +1,17 @@
 @charset "utf-8";
 @import "~bulma/bulma";
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+#loader-overlay {
+  background: rgba(0, 0, 0, 0.52);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  display: none;
+}
 .navbar-item.has-dropdown .navbar-dropdown {
   display: none;
 }
@@ -28,11 +39,11 @@
   font-size: 1.3rem;
   font-weight: bold;
 }
+form {
+  border-radius: 0px !important;
+}
 #modal {
   z-index: 101 !important;
-  #form_container {
-    border-radius: 0px !important;
-  }
 }
 #order_init {
   pointer-events: none;

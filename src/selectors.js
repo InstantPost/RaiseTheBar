@@ -4,3 +4,6 @@ export function id(str) {
 export function cls(str) {
   return document.getElementsByClassName(str);
 }
+export function $(str) {
+  return document.querySelectorAll(str);
+}

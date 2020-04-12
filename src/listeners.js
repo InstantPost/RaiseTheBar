@@ -1,4 +1,4 @@
-import { id, cls } from "./selectors";
+import { id, cls, $ } from "./selectors";
 import { order } from "./OrderForm";
 import { volunteer } from "./VolunteerForm";
 import { commodities } from "./CommoditiesForm";
@@ -11,6 +11,16 @@ import { CloseModal } from "./Modal";
 import { ViewImg } from "./ImgViewer";
 import { filter } from "./FilterData";
 import { search } from "./SearchBar";
+import { Authenticate } from "./Auth";
+id("login_btn").addEventListener("click", () => {
+  Authenticate("", {
+    func: function() {
+      CloseModal();
+    },
+    args: ""
+  });
+  $("#modal .title").forEach(e => (e.style.display = "none"));
+});
 id("search_input").addEventListener("input", search);
 id("doctor_init").addEventListener("click", doctor);
 id("volunteer_init").addEventListener("click", volunteer);
@@ -18,7 +28,7 @@ id("commodity_init").addEventListener("click", commodities);
 id("printer_init").addEventListener("click", printers);
 id("requirement_init").addEventListener("click", requirement);
 id("manufacturer_init").addEventListener("click", manufacturer);
-document.querySelector("body").addEventListener("wheel", (event) => {
+document.querySelector("body").addEventListener("wheel", event => {
   const target = event.target;
   if (target.classList.contains("obj_img")) {
     if (event.deltaX) {
@@ -28,7 +38,7 @@ document.querySelector("body").addEventListener("wheel", (event) => {
     else target.parentNode.scrollLeft -= 50;
   }
 });
-document.querySelector("body").addEventListener("click", (event) => {
+document.querySelector("body").addEventListener("click", event => {
   const target = event.target;
   if (target.classList.contains("filter_table_data")) {
     filter(target);
@@ -42,16 +52,21 @@ document.querySelector("body").addEventListener("click", (event) => {
   if (target.classList.contains("obj-edit")) {
     EditCard(target);
   }
+  if (target.id == "logout_btn") {
+    localStorage.clear();
+    id("logout_btn").style.display = "none";
+    id("login_btn").style.display = "block";
+  }
   if (target.classList.contains("navbar-item")) {
     const tab = target.getAttribute("data-href");
     if (!tab) return;
     if (tab == "home") id("search_input_container").style.display = "none";
     else id("search_input_container").style.display = "flex";
-    Array.from(cls("navbar-item")).forEach((el) => {
+    Array.from(cls("navbar-item")).forEach(el => {
       el.classList = "navbar-item is-white has-text-grey";
     });
     target.classList = "navbar-item is-white has-text-primary active-tab-link";
-    Array.from(cls("tab")).forEach((el) => {
+    Array.from(cls("tab")).forEach(el => {
       el.classList.remove("active");
     });
     id("search_input").setAttribute("data-entity", tab);
@@ -60,7 +75,7 @@ document.querySelector("body").addEventListener("click", (event) => {
   }
 });
 
-document.querySelector("body").addEventListener("mouseover", (event) => {
+document.querySelector("body").addEventListener("mouseover", event => {
   const target = event.target;
   if (target.classList.contains("link")) {
     var text = event.target.innerText;

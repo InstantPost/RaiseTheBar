@@ -7,14 +7,14 @@ import verifyOTPTemplate from "./verify_otp.html";
 function verifyAuth(phone) {
   return new Promise((resolve, reject) => {
     OpenModal(verifyOTPTemplate);
-    id("login").addEventListener("submit", (event) => {
+    id("login").addEventListener("submit", event => {
       event.preventDefault();
       document.querySelector("button").classList += " is-loading";
       GenericPOST(process.env.BACKEND_URI + "auth/verify/", {
         phone: phone,
-        otp: document.querySelector("input").value,
+        otp: document.querySelector("input").value
       })
-        .then((res) => {
+        .then(res => {
           if (res.status == 200) {
             return res.json();
           } else if (res.status == 404) {
@@ -25,7 +25,7 @@ function verifyAuth(phone) {
             throw "error";
           }
         })
-        .then((data) => {
+        .then(data => {
           resolve(data.token);
           document.querySelector("button").classList = "button is-success";
           document.querySelector(
@@ -35,7 +35,7 @@ function verifyAuth(phone) {
            </span>
           <span>Verified</span>`;
         })
-        .catch((err) => {
+        .catch(err => {
           console.log(err);
           document.querySelector("button").classList = "button is-primary";
           document.querySelector("button").innerHTML = `Verify`;
@@ -45,7 +45,7 @@ function verifyAuth(phone) {
 }
 function SendOTP(phone, callback = null) {
   return GenericPOST(process.env.BACKEND_URI + "auth/", { phone: phone })
-    .then((res) => {
+    .then(res => {
       if (res.status != 200) {
         alert("Failed to send OTP");
         CloseModal();
@@ -53,11 +53,15 @@ function SendOTP(phone, callback = null) {
       }
     })
     .then(() => verifyAuth(phone))
-    .then((token) => {
-      console.log(callback);
-      if (callback) callback.func(callback.args);
+    .then(token => {
+      id("logout_btn").style.display = "block";
+      id("login_btn").style.display = "none";
+      localStorage.setItem("token", token);
+      setTimeout(() => {
+        if (callback) callback.func(callback.args);
+      }, 500);
     })
-    .catch((err) => console.log(err));
+    .catch(err => console.log(err));
 }
 export function Authenticate(phone, callback = null) {
   if (isAuthenticated()) {
@@ -66,14 +70,14 @@ export function Authenticate(phone, callback = null) {
     if (phone) {
       OpenModal(LoginTemplate);
       document.querySelector("#modal .mobile").innerHTML = phone;
-      id("login").addEventListener("submit", (event) => {
+      id("login").addEventListener("submit", event => {
         event.preventDefault();
         document.querySelector("button").classList += " is-loading";
         SendOTP(phone, callback);
       });
     } else {
       OpenModal(LoginWithoutPhoneTemplate);
-      id("login").addEventListener("submit", (event) => {
+      id("login").addEventListener("submit", event => {
         event.preventDefault();
         document.querySelector("button").classList += " is-loading";
         const phone = document.querySelector("#modal .mobile").value;
@@ -82,7 +86,7 @@ export function Authenticate(phone, callback = null) {
     }
   }
 }
-function isAuthenticated() {
+export function isAuthenticated() {
   const token = localStorage.getItem("token");
   if (token) return true;
   else return false;
