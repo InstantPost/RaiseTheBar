@@ -31,7 +31,7 @@ export function ActVol() {
     let uri = `${process.env.BACKEND_URI}${entity}/?id=`;
     if (!objects.length) continue;
     for (let i = 0; i < objects.length; i++) {
-      uri += objects[i];
+      uri += objects[i] + ",";
     }
     fetch(uri)
       .then(e => {
