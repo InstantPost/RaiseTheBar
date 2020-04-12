@@ -11,3 +11,9 @@ export function CloseModal() {
   id("modal-content").innerHTML = "";
   id("modal").classList.remove("is-active");
 }
+export function OpenSpinner() {
+  id("loader-overlay").style.display = "flex";
+}
+export function CloseSpinner() {
+  id("loader-overlay").style.display = "none";
+}
