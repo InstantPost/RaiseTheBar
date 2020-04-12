@@ -1,0 +1,54 @@
+<form class="box">
+    <div class="field">
+        <div class="control">
+            <input id="name" class="input" type="text" placeholder="Full Name" required disabled>
+        </div>
+    </div>
+    <div class="field">
+        <div class="control has-icons-left has-icons-right">
+            <input title="Phone number should contain atleast 10 digits, starting with 6,7,8,9" pattern="[6789][0-9]{9}"
+                maxlength="10" id="phone" class="input" type="text" placeholder="Phone number" required disabled>
+            <span class="icon is-small is-left">
+                <i class="fas fa-phone"></i>
+            </span>
+        </div>
+
+    </div>
+    <div class="field">
+        <div class="control has-icons-left has-icons-right">
+            <input id="email" class="input" type="email" placeholder="Email" required disabled>
+            <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+            </span>
+        </div>
+
+    </div>
+    <div class="field">
+        <div class="control">
+            <textarea minlength="50" id="description" class="textarea input" placeholder="Description"
+                required></textarea>
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Add more Images/PDFs</label>
+        <div class="control has-icons-left has-icons-right">
+            <input id="images" class="input" type="file" accept="application/pdf,image/*" multiple />
+        </div>
+    </div>
+    <br>
+    <div class="edit-action-container ">
+        <button id="delete" type="button" class="button is-small is-danger">Delete</button>
+        <button id="complete" type="button" class="button is-small is-warning">Mark as Complete</button>
+    </div><br>
+    <span class="has-text-danger">Note: Deleting records from our servers can take upto a week.</span>
+    <br><br>
+    <div class="field is-grouped submit">
+        <div class="control">
+            <button id="submit" type="submit" class="button is-link">Submit</button>
+        </div>
+        <div class="control">
+            <button class="button is-danger is-light form_cancel">Cancel</button>
+        </div>
+    </div>
+</form>

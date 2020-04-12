@@ -4,5 +4,6 @@ const utils = {
   urlify,
   boldText,
 };
+export { ParseJWT } from "./jwt";
 
 export default utils;
