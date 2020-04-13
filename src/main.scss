@@ -295,7 +295,7 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  // justify-content: center;
   align-items: stretch;
 }
 
@@ -305,9 +305,9 @@ input[type="number"]::-webkit-outer-spin-button {
   border-width: thin;
   text-align: center;
   vertical-align: middle;
-  height: 8em;
-  width: 8em;
-  margin: 0.5em;
+  height: 10rem;
+  width: 10rem;
+  margin: 0 0.5rem 0.5rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -315,7 +315,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .graphnumbers {
   font-weight: bold;
-  font-size: 1.3em;
+  font-size: 1.3rem;
 }
 
 .modal-content {
@@ -323,6 +323,63 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 80%;
   }
 }
+
+
+
+#crowdfund{
+  text-align: center;
+  border: 2px solid green;
+  width: 100%;
+  padding: 0.5em 1em;
+  margin: 1em auto;
+  ol{
+    list-style: none;
+  }
+}
+
+// New Updates
+
+.homewrapper
+{
+		max-width:75%;
+		padding:2px;
+		margin:auto;
+    padding:1em;
+    font-size: 1.4rem;
+
+    .introText{
+      max-width: 80%;
+
+      .smallIntro{
+        padding: 1rem 0;
+      }
+      
+      .largerIntro{
+        font-size: 1.8rem;
+        padding: 1rem 0;
+      }
+    }
+
+    .heading_main{
+      font-size: 1.8rem;
+      padding: 1em 0 0.5em 0;
+    }
+
+    #homemainlinks{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+
+      div{
+        width:48%;
+        background-color:#e3e3e3;
+        padding:1rem;
+      }
+    }
+}
+
+
+
 
 //Added for Width
 
@@ -355,4 +412,52 @@ input[type="number"]::-webkit-outer-spin-button {
       }
     }
   }
+
+  #crowdfund{
+    max-width: 800px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+
+  .hero-wrapper{
+    padding: 0 !important;
+  }
+  .homewrapper
+{
+		max-width:100%;
+		padding:0px;
+		margin:auto;
+    font-size: 1.2rem;
+
+    .introText{
+      max-width: 100%;
+
+      .smallIntro{
+        padding: 0.5em 0;
+      }
+      
+      .largerIntro{
+        font-size: 1.3em;
+        padding: 0.5em 0;
+      }
+    }
+
+    .heading_main{
+      font-size: 1.3em;
+      padding: 1em 0 0.5em 0;
+    }
+
+    #homemainlinks{
+      display:flex;
+      flex-direction: column;
+
+      div{
+        width:100%;
+        margin: 0.2em 0;
+        background-color:#e3e3e3;
+        padding:1rem;
+      }
+    }
+}
 }
