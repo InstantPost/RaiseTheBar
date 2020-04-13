@@ -28,7 +28,7 @@ export function ActVol() {
   for (const entity in data) {
     console.log(entity);
     const objects = data[entity];
-    let uri = `${process.env.BACKEND_URI}${entity}/?id=`;
+    let uri = `https://instantpost.org/covid/api/${entity}/?id=`;
     if (!objects.length) continue;
     for (let i = 0; i < objects.length; i++) {
       uri += objects[i] + ",";
@@ -44,9 +44,9 @@ export function ActVol() {
           var htmlstring = `<div  data-entity="volunteer" class="data-row box databox"><div class="columns">
                         <div class="column is-half ">
                             <div class="obj-details-photos"><img class="obj_img"
-                            src=${process.env.FILE_STORE}${p.id}/${
-            p.data.images[0]
-          }
+                            src=https://instantpost.org/covid_img_store/${
+                              p.id
+                            }/${p.data.images[0]}
                              alt="No Images Attached"></div>
                             <div class="obj-category">${p.data.category}</div>
                         </div>

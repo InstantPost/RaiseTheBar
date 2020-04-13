@@ -26,7 +26,6 @@ function edit(ID) {
       if (e.status == 401) {
         CloseSpinner();
         alert("You are not Authorized to do that");
-
         throw "error";
       }
       return e.json();
@@ -40,7 +39,8 @@ function edit(ID) {
       id("description").value = json.data.description;
       let form = new FormData();
       let data = {
-        id: json.id
+        id: json.id,
+        data: {}
       };
       $("#modal #delete")[0].addEventListener("click", e => {
         data.status = 50;
@@ -84,7 +84,10 @@ function edit(ID) {
           });
       });
       if (TokenData.role == 20) {
-        $("#modal .input").forEach(el => (el.disabled = true));
+        if (TokenData.phone != json.data.phone) {
+          $("#modal .input").forEach(el => (el.disabled = true));
+          $("#modal .submit")[0].style.display = "none";
+        }
         let button = document.createElement("button");
         button.innerText = "Ban";
         button.classList = "button is-warning is-small";
@@ -109,13 +112,17 @@ function edit(ID) {
               console.log(err);
             });
         });
-        $("#modal .submit")[0].style.display = "none";
         $("#modal .edit-action-container")[0].appendChild(button);
       }
       $("#modal form")[0].addEventListener("submit", e => {
         console.log(e);
         e.preventDefault();
-        data.description = id("description").value;
+        if (id("description").value != json.data.description)
+          data.data.description = id("description").value;
+        if (id("name").value != json.data.name)
+          data.data.name = id("name").value;
+        if (id("email").value != json.data.email)
+          data.data.email = id("email").value;
         form.append("data", JSON.stringify(data));
         const num_images = id("images").files.length;
         if (num_images + json.data.images.length > 10) {
@@ -128,6 +135,7 @@ function edit(ID) {
           }
         }
         $("#modal #submit")[0].classList += " is-loading";
+        console.log(data);
         PUTRequest(form, entity)
           .then(e => {
             if (e.status == 200) {
@@ -144,6 +152,12 @@ function edit(ID) {
           .then(() => {
             $(`[id='${json.id}'] .obj-details-desc`)[0].innerHTML = id(
               "description"
+            ).value;
+            $(`[id='${json.id}'] .obj-details-name`)[0].innerHTML = id(
+              "name"
+            ).value;
+            $(`[id='${json.id}'] .obj-details-email`)[0].innerHTML = id(
+              "email"
             ).value;
             $("#modal #submit")[0].classList = "button is-success";
             $("#modal #submit")[0].innerHTML = "Saved";
