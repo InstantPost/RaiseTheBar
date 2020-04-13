@@ -20,13 +20,13 @@ export function AddObj(obj, target, entity) {
     "category" in obj.data ? obj.data.category : "";
   row.getElementsByClassName("obj-details-table")[0].innerHTML += `
             <div>
-                <span class="filter_table_data obj_data_private">${
+                <span class="filter_table_data obj_data_private obj-details-name">${
                   obj.data.name
                 }</span>
             </div>
             
             <div>
-                <span data=${entity} data-filter-by="email" class="link filter_table_data ${
+                <span data=${entity} data-filter-by="email" class=" obj-details-email link filter_table_data ${
     obj.data.public_data["email"] ? "" : "obj_data_private"
   }">${
     obj.data.public_data["email"] ? obj.data.email : "Email not disclosed"
