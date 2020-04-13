@@ -378,7 +378,136 @@ input[type="number"]::-webkit-outer-spin-button {
     }
 }
 
+// New Updates
 
+.crowdfundbtn{
+  background-color: green;
+  color: white !important;
+  border-radius: 5px ;
+  margin: 0.5rem;
+}
+
+.crowdfundbtn:hover{
+  background-color: #0d0 !important;
+}
+
+.homewrapper
+{
+		max-width:75%;
+		padding:2px;
+		margin:auto;
+    padding:1em;
+    font-size: 1.4rem;
+
+    .introText{
+      max-width: 80%;
+
+      .smallIntro{
+        padding: 1rem 0;
+      }
+      
+      .largerIntro{
+        font-size: 1.8rem;
+        padding: 1rem 0;
+      }
+    }
+
+    .heading_main{
+      font-size: 1.8rem;
+      padding: 1em 0 0.5em 0;
+    }
+
+    .heading_second{
+      font-size: 1.6rem;
+      padding: 0.8em 0 0.3em 0;
+      text-decoration: underline;
+    }
+
+    #homemainlinks{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+
+      div{
+        width:48%;
+        background-color:#e3e3e3;
+        padding:1rem;
+        cursor: pointer;
+        *{
+          pointer-events: none;
+        }
+      }
+      div:hover{
+        box-shadow: 2px 2px 2px 2px gray !important;
+      }
+    }
+
+    #homestat{
+      .tnctext{
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+      #graphs {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        // justify-content: center;
+        align-items: stretch;
+        .graphbox {
+          border-style: solid;
+          border-radius: 4px;
+          border-width: thin;
+          text-align: center;
+          vertical-align: middle;
+          height: 10rem;
+          width: 10rem;
+          margin: 0 0.5rem 0.5rem 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .graphnumbers {
+          font-weight: bold;
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    .about{
+      .herosData{
+        p{
+          margin: 0.5em 0;
+        }
+      }
+      .herosImage{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .imgcap{
+          max-width: 300px;
+          height: auto;
+          border: 1px solid #05e;
+          border-radius: 10px;
+          padding: 0.5em;
+          margin-bottom: 5px;
+          img{
+            width: 99%;
+            height: 300px;
+            object-fit: scale-down;
+            margin: auto;
+          }
+          figcaption{
+            flex-wrap: wrap;
+            margin: auto;
+          }
+        }
+      }
+      .our_bit{
+        margin-top: 0.8rem; 
+      }
+    }
+    
+}
 
 
 //Added for Width
@@ -420,6 +549,14 @@ input[type="number"]::-webkit-outer-spin-button {
 
 @media screen and (max-width: 769px) {
 
+  .section{
+    padding: 0;
+  }
+
+  .crowdfundbtn{
+    display: none !important;
+  }
+
   .hero-wrapper{
     padding: 0 !important;
   }
@@ -428,7 +565,7 @@ input[type="number"]::-webkit-outer-spin-button {
 		max-width:100%;
 		padding:0px;
 		margin:auto;
-    font-size: 1.2rem;
+    font-size: 1rem;
 
     .introText{
       max-width: 100%;
@@ -457,6 +594,36 @@ input[type="number"]::-webkit-outer-spin-button {
         margin: 0.2em 0;
         background-color:#e3e3e3;
         padding:1rem;
+      }
+    }
+    #homestat{
+      .tnctext{
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+      #graphs {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        // justify-content: center;
+        align-items: stretch;
+        .graphbox {
+          border-style: solid;
+          border-radius: 4px;
+          border-width: thin;
+          text-align: center;
+          vertical-align: middle;
+          height: 7em;
+          width: 7em;
+          margin: 0 0.5em 0.5em 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .graphnumbers {
+          font-weight: bold;
+          font-size: 1.1em;
+        }
       }
     }
 }
