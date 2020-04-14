@@ -13,7 +13,8 @@ export function ActVol() {
       "58ae6b53-e7b0-480b-ae36-c162c8732fd1",
       "e77d1386-8a5f-4308-9ee8-91b4af78d103",
       "b460bce2-d336-4054-bb1c-0fca02755fb0",
-      "e201c5b6-4747-4dc2-b265-8c262dcaa390"
+      "e201c5b6-4747-4dc2-b265-8c262dcaa390",
+      "ce0f620c-bc52-4528-87f1-fe70239eb64a"
     ],
     doctor: [],
     printer: [
