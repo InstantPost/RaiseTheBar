@@ -38,7 +38,6 @@
                             <a id="refresh" href="/raisethebar">
                                 <i class="fas fa-sync-alt" style="font-size: 18px;"></i>
                             </a>
-                            <a href="#crowdfund" class="navbar-item is-white has-text-grey crowdfundbtn">Crowdfund!</a>
                             <span class="navbar-burger burger is-centered" data-target="navMenu">
                                 <span></span>
                                 <span></span>
@@ -79,144 +78,148 @@
             </div>
             <div class="content-container">
                 <div id="home" class="hero-body tab active">
-                    <h1 class="title is-4">
-                        Crowdfunding Now !
-                    </h1>
-                    The <b>Face Shield Project</b> under <b>RaiseTheBar</b> initiative is crowdfunding now. Please
-                    transfer funds to the below mentioned account:<br /> <br />
-                    <ol>
-                        <li>A contribution as small as <b>Rs. 50</b> also makes a difference by allowing us to donate
-                            <b>1 face shield</b> to a doctor.</li>
-                        <li>If you fund the project with <b>Rs. 500</b> we will donate <b>10 face shields</b> to the
-                            doctors.</li>
-                        <li>If you fund the project with <b>Rs. 1000</b> we will donate <b>20 face shields</b> to the
-                            doctors.</li>
-                        <li>If you fund the project with <b>Rs. 10000</b> we will donate <b>200 face shields</b> to the
-                            doctors.</li>
-                        <!--li>We are working hard to formalise the structure at InstantPost to accept contributions as donations directly into the company account, but this will take time and virus won't wait. We will be formal by the time we get to the first milestone.</li-->
-                    </ol><br />
-                    <ol>
-                        <li><b>Name: AAYUSH BASAVESH</b></li>
-                        <li><b>Account Number: 881029234295</b></li>
-                        <li><b>MMID: 9641638</b></li>
-                        <li><b>UPI/VPA: <a href="upi://pay?pa=aayushbasavesh@dbs&pn=digiSavings">aayushbasavesh@dbs</a></b>
-                        </li>
-                        <li><b>Bank name: DBS Bank</b></li>
-                        <li><b>Bank IFSC: DBSS0IN0811</b></li>
-                    </ol><br />
-                    Scan the QR code to fund the project now<br />
-                    <img style="max-width: 200px; max-height: 200px"
-                        src="https://instantpost.org/crowdfundaccount.jpeg" /><br />
-                    <b>Latest contributions</b><br />
-                    <ol>
-                        <li>₹300</li>
-                        <li>₹1000</li>
-                        <li>₹100</li>
-                        <li>₹5000</li>
-                        <li>₹100</li>
-                        <li>₹500</li>
-                        <li>₹500</li>
-                    </ol><br />
-                    <div style="float: left; margin: 10px; padding-right: 25px; border-right: 1px;">
-                        <figure style="max-width:250px; margin: 10px; padding: 5px;">
-                            <img src="https://instantpost.org/donation-1.jpg">
-                            <figcaption>One of the medical worker who has already received benefit from
-                                <b>RaiseTheBar</b> Initiative</figcaption>
-                        </figure>
-                        <figure style="max-width:250px; margin: 10px; padding: 5px;">
-                            <img src="https://instantpost.org/donation-2.jpg">
-                            <figcaption><b>Aayush Basavesh</b>, Co-founder at <a
-                                    href="https://www.xtrogenesistechnology.com/">Xtrogenesis Technology</a> helping
-                                with packaging of the shields along with <b>Shakthivel R</b></figcaption>
-                        </figure>
-                        <figure style="max-width:250px; margin: 10px; padding: 5px;">
-                            <img src="https://instantpost.org/donation-3.jpg">
-                            <figcaption>Some the initially printed face shields way early in March itself</figcaption>
-                        </figure>
-                        <figure style="max-width:250px; margin: 10px; padding: 5px;">
-                            <img src="https://instantpost.org/donation-4.jpg">
-                            <figcaption><b>Aayush Basavesh</b>, Co-founder at <a
-                                    href="https://www.xtrogenesistechnology.com/">Xtrogenesis Technology</a> making the
-                                donation</figcaption>
-                        </figure><br />
+                    <div class="homewrapper">
+                        <div class="introScreen">
+                            <div class="bgimg"></div>
+                            <h2>Raise The Bar</h2>
+                            <button class="crowdfundbtn" onclick="window.location.href = '#crowdfund';">Pledge Now</button>
+                        </div>
+                        <div class="introText">
+                            <p class="smallIntro">
+                                It's important to flatten the curve,<br>
+                                but it is equally important to <strong>Raise the Bar</strong>
+                            </p>
+                            <p class="largerIntro">
+                                RaiseTheBar would like to invoke the 3D printing community across the country to join the initiative :<br>
+								<strong>Creating the largest possible distributed manufacturing setup to fight COVID.</strong>
+                            </p>
+                        </div>
+                        
+                        <h3 class="heading_main">Get a Face Shield</h3>
+
+                        <div id="homemainlinks">
+                            <div id="docs" data-href="doctor">
+                                <p><strong>For Doctors &#8594</strong></p>
+                                <p>Post your requirements on the Doctor's Tab</p>
+                            </div>
+                            <div id="nondocs" data-href="requirement">
+                                <p><strong>For Everyone Else &#8594</strong></p>
+                                <p>Post your requirements on the Requirement's Tab</p>
+                            </div>
+                        </div>
+
+                        <div id="homestat">
+                            <h3 class="heading_main">Project Stats</h3>
+                            <p class="tnctext">We need to print 1000s of face shields every minute and make them available across India for the frontliners.</p>
+                            <div id="graphs">
+                            </div>	
+                        </div>
+
+                        <div class="about">
+                            <h3 class="heading_main">About <strong>RaiseTheBar</strong></h3>
+                            <div class="herosData">
+                                <h4 class="heading_second">Our Heroes on the ground</h4>
+                                <p>While we are a much larger team of individuals and startups, we should take note of Heros amoung us like <b>Aayush Basavesh, Co-founder at <a href="https://www.xtrogenesistechnology.com/">Xtrogenesis Technology</a></b> and <b>Shakthivel R</b> who help the initiative in Bangalore with On ground support. They are helping with procurement, logistics, donations and everything else that needs to happen in person. Each of their contributions involve the risk of
+                                infection and it's important to recognise what they are doing for the whole initiative.</p>
+                                <p><b>RaiseTheBar</b> would like to invoke the 3D printing community across the country to join
+                                the initiative to create the largest possible distributed manufacturing setup
+                                to fight COVID. Check the <b>projects tab</b> to learn more about our production process.
+                                We are releasing as much details as we can for everyone else to start organised manufacturing of 3D
+                                printed face shields.</p>
+                                <p>We are being joined by Statups and Individuals everyday to fulfill all kind of roles like
+                                engineering, designing, software, medical advice, marketing and many others. Join us today by
+                                posting on the volunteers or 3D-Printers tab and help in whatever way possible at your end to expand
+                                out production capability.</p>
+                            </div>
+                            <div class="herosImage">
+                                <div class="imgcap">
+                                    <img src="https://instantpost.org/donation-1.jpg">
+                                    <figcaption>One of the medical worker who has already received benefit from <b>RaiseTheBar</b> Initiative</figcaption>
+                                </div>
+                                <div class="imgcap">
+                                    <img src="https://instantpost.org/donation-2.jpg">
+                                    <figcaption><b>Aayush Basavesh</b>, Co-founder at <a href="https://www.xtrogenesistechnology.com/">Xtrogenesis Technology</a> helping with packaging of the shields along with <b>Shakthivel R</b></figcaption>
+                                </div>
+                                <div class="imgcap">
+                                    <img src="https://instantpost.org/donation-3.jpg">
+                                    <figcaption>Some the initially printed face shields way early in March itself</figcaption>
+                                </div>
+                                <div class="imgcap">
+                                    <img src="https://instantpost.org/donation-4.jpg">
+                                    <figcaption><b>Aayush Basavesh</b>, Co-founder at <a href="https://www.xtrogenesistechnology.com/">Xtrogenesis Technology</a> making the donation</figcaption>
+                                </div>
+                            </div>
+                            <p class="our_bit">We are doing our bit by developing this free to dashboard to connect all of us together.</p>
+                            <h4 class="heading_second">Why?</h2>
+                            <ol>
+                                <li>It's important to have <b>publicly accessible information</b> for people who are searching
+                                    for it</li>
+                                <li>Lack of information means lack of competition which leads to <b>increase in prices</b> of
+                                    essential commodities</li>
+                                <li>Doctors and other essential services staff like doctors have no clue about <b>cost of
+                                        production</b> so cannot negoatiate</li>
+                                <li>There is a <b>huge gap between demand and supply</b> of essential goods for medical staff,
+                                    which is putting pressure on doctors to work in unsafe conditions</li>
+                            </ol>
+                            <h4 class="heading_second">How?</h2>
+                            <ol>
+                                <li>RaiseTheBar is a digital dashboard that works as <b>ecommerce</b> portal for COVID suppliers
+                                    to showcase their capabilities and inventory. Please use the Manufacturers tab to showcase.
+                                </li>
+                                <li>RaiseTheBar is a digital dashboard that works as <b>reverse ecommerce</b> portal for doctors
+                                    to post their COVID specific requirements for suppliers and manufactures to contact them.
+                                    Please use the Doctors tab to highlight your requirements.</li>
+                                <li>RaiseTheBar is a digital dashboard that works as <b>reverse ecommerce</b> portal for
+                                    everyone else
+                                    to post their COVID specific requirements for suppliers and manufactures to contact them.
+                                    Please use the requirements tab if you not a doctor.</li>
+                                <li>RaiseTheBar is an initiative to share the complete <b>production process and the cost of
+                                        production</b> for everyone to make sure doctors are aware of it and can properly decide
+                                    how much they should be paying for it</li>
+                                <li>RaiseTheBar is an initiative to bring the best out of the 3D printing community in India to
+                                    help doctors.</li>
+                            </ol>
+                            <h4 class="heading_second">What?</h2>
+                            <ol>
+                                <li>We have set up the minimum dashboard at InstantPost and are adding more volunteer support to improve the dashboard. If you want to join us, please post your details on the Volunteers tab and we will contact you as more help is needed.</li>
+                                <li>We have set up a minimum team of doctors and mechanical designers who are designing the minimum possible tools and equipment that can be easily 3D printed. We are adding these designs and also the ones we find in open source on the projects tab. If you are a mechanical designer or doctor who wants to join, please post your details on the volunteers tab and we will contact you as more help is needed.</li>
+                                <li>At InstantPost, we are dedicating the complete 3D printing capacity to print 1 face shield frame every 5 minutes. All these frames as part of the RaiseTheBar initiative will be donated to doctors, hospitals, police and other relevant individuals who are right now working on the frontline fighting COVID-19.</li>
+                            </ol>
+                        </div>
                     </div>
-                    <h1 class="title is-4">
-                        Our Heroes on the ground
-                    </h1>
-                    While we are a much larger team of individuals and startups, we should take note of Heros among us
-                    like <b>Aayush Basavesh, Co-founder at <a href="https://www.xtrogenesistechnology.com/">Xtrogenesis
-                            Technology</a></b> and <b>Shakthivel R</b> who help the initiative in Bangalore with On
-                    ground support. They are helping with procurement, logistics, donations and everything else that
-                    needs to happen in person. Each of their contributions involve the risk of
-                    infection and it's important to recognise what they are doing for the whole initiative.<br /><br />
-                    <b>RaiseTheBar</b> would like to invoke the 3D printing community across the country to join
-                    the initiative to create the largest possible distributed manufacturing setup
-                    to fight COVID. Check the <b>projects tab</b> to learn more about our production process.
-                    We are releasing as much details as we can for everyone else to start organised manufacturing of 3D
-                    printed face shields.<br /><br />
-                    We are being joined by Statups and Individuals everyday to fulfill all kind of roles like
-                    engineering, designing, software, medical advice, marketing and many others. Join us today by
-                    posting on the volunteers or 3D-Printers tab and help in whatever way possible at your end to expand
-                    out production capability.<br /><br />
-                    <h1 class="title is-4">
-                        Want to get a face shield ?
-                    </h1>
-                    If you are a doctor, please post your requirements on <b>Doctors Tab</b><br />
-                    Anyone else, can post their requirements on <b>Requirements Tab</b><br /><br />
-                    <h1 class="title is-4">
-                        It's important to flatten the curve!<br />
-                        Equally important is to Raise the Bar!
-                    </h1>
-                    We are doing our bit by developing this free to dashboard to connect all of us together.<br /><br />
-                    <h2 class="title is-5">Why ?</h2>
-                    <ol>
-                        <li>It's important to have <b>publicly accessible information</b> for people who are searching
-                            for it</li>
-                        <li>Lack of information means lack of competition which leads to <b>increase in prices</b> of
-                            essential commodities</li>
-                        <li>Doctors and other essential services staff like doctors have no clue about <b>cost of
-                                production</b> so cannot negoatiate</li>
-                        <li>There is a <b>huge gap between demand and supply</b> of essential goods for medical staff,
-                            which is putting pressure on doctors to work in unsafe conditions</li>
-                    </ol>
-                    <br />
-                    <h2 class="title is-5">How ?</h2>
-                    <ol>
-                        <li>RaiseTheBar is a digital dashboard that works as <b>ecommerce</b> portal for COVID suppliers
-                            to showcase their capabilities and inventory. Please use the Manufacturers tab to showcase.
-                        </li>
-                        <li>RaiseTheBar is a digital dashboard that works as <b>reverse ecommerce</b> portal for doctors
-                            to post their COVID specific requirements for suppliers and manufactures to contact them.
-                            Please use the Doctors tab to highlight your requirements.</li>
-                        <li>RaiseTheBar is a digital dashboard that works as <b>reverse ecommerce</b> portal for
-                            everyone else
-                            to post their COVID specific requirements for suppliers and manufactures to contact them.
-                            Please use the requirements tab if you not a doctor.</li>
-                        <li>RaiseTheBar is an initiative to share the complete <b>production process and the cost of
-                                production</b> for everyone to make sure doctors are aware of it and can properly decide
-                            how much they should be paying for it</li>
-                        <li>RaiseTheBar is an initiative to bring the best out of the 3D printing community in India to
-                            help doctors.</li>
-                    </ol>
-                    <br />
-                    <h2 class="title is-5">What ?</h2>
-                    <ol>
-                        <li>We have set up the minimum dashboard at InstantPost and are adding more volunteer support to
-                            improve the dashboard. If you want to join us, please post your details on the Volunteers
-                            tab and we will contact you as more help is needed.</li>
-                        <li>We have set up a minimum team of doctors and mechanical designers who are designing the
-                            minimum possible tools and equipment that can be easily 3D printed. We are adding these
-                            designs and also the ones we find in open source on the projects tab. If you are a
-                            mechanical designer or doctor who wants to join, please post your details on the volunteers
-                            tab and we will contact you as more help is needed.</li>
-                        <li>At InstantPost, we are dedicating the complete 3D printing capacity to print 1 face shield
-                            frame every 5 minutes. All these frames as part of the RaiseTheBar initiative will be
-                            donated to doctors, hospitals, police and other relevant individuals who are right now
-                            working on the frontline fighting COVID-19.<br /><br />
-                            We are being joined by more startups and individuals everyday. Write to us at:
-                            raisethebar@instantpost.in
-                    </ol>
-                    </ul>
+                    <div id="crowdfund">
+                        <h1 class="title is-4">
+                            Crowdfunding Now !
+                        </h1>
+                        <p>The <b>Face Shield Project</b> under <b>RaiseTheBar</b> initiative is crowdfunding now. Please transfer funds to the below mentioned account:<br /> <br /></p>
+                        <ol>
+                            <li><b>Name: AAYUSH BASAVESH</b></li>
+                            <li><b>Account Number: 881029234295</b></li>
+                            <li><b>MMID: 9641638</b></li>
+                            <li><b>VPA: <a href="upi://pay?pa=aayushbasavesh@dbs&pn=digiSavings">aayushbasavesh@dbs</a></b></li>
+                            <li><b>Bank name: DBS Bank</b></li>
+                            <li><b>Bank IFSC: DBSS0IN0811</b></li>
+                        </ol><br />
+                        Scan the QR code to fund the project now<br />
+                        <img style="max-width: 200px; max-height: 200px" src="https://instantpost.org/crowdfundaccount.jpeg"/><br />
+                        <ol>
+                            <li>A contribution as small as <b>Rs. 50</b> also makes a difference by allowing us to donate <b>1 face shield</b> to a doctor.</li>
+                            <li>If you fund the project with <b>Rs. 500</b> we will donate <b>10 face shields</b> to the doctors.</li>
+                            <li>If you fund the project with <b>Rs. 1000</b> we will donate <b>20 face shields</b> to the doctors.</li>
+                            <li>If you fund the project with <b>Rs. 10000</b> we will donate <b>200 face shields</b> to the doctors.</li>
+                            <!--li>We are working hard to formalise the structure at InstantPost to accept contributions as donations directly into the company account, but this will take time and virus won't wait. We will be formal by the time we get to the first milestone.</li-->
+                        </ol><br />
+                        <b>Latest contributions</b><br />
+                        <ol>
+                            <li>₹300</li>
+                            <li>₹1000</li>
+                            <li>₹100</li>
+                            <li>₹5000</li>
+                            <li>₹100</li>
+                            <li>₹500</li>
+                            <li>₹500</li>
+                        </ol>
+                    </div>
                     <div class="data-wrapper">
                         <div class="data-container " id="">
                             <div id="activevol" class="data-obj-container" id="volunteers_data">

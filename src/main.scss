@@ -295,7 +295,7 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  // justify-content: center;
+   justify-content: center;
   align-items: stretch;
 }
 
@@ -305,12 +305,13 @@ input[type="number"]::-webkit-outer-spin-button {
   border-width: thin;
   text-align: center;
   vertical-align: middle;
-  height: 10rem;
-  width: 10rem;
+  height: 7rem;
+  width: 7rem;
   margin: 0 0.5rem 0.5rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size:75%
 }
 
 .graphnumbers {
@@ -341,69 +342,63 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .homewrapper
 {
-		max-width:75%;
-		padding:2px;
-		margin:auto;
-    padding:1em;
-    font-size: 1.4rem;
+	max-width:75%;
+	padding:2px;
+	margin:auto;
+  padding:1em;
+  font-size: 1.4rem;
 
-    .introText{
-      max-width: 80%;
+  
 
-      .smallIntro{
-        padding: 1rem 0;
-      }
-      
-      .largerIntro{
-        font-size: 1.8rem;
-        padding: 1rem 0;
-      }
+  .introScreen{
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .bgimg{
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url(./assets/bg.png);
+      height: 100vh;
+      width: 100%;
+      z-index: -1;
     }
-
-    .heading_main{
-      font-size: 1.8rem;
-      padding: 1em 0 0.5em 0;
+    h2{
+      font-family:'Titillium Web', sans-serif !important;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #1f363d;
     }
-
-    #homemainlinks{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:space-between;
-
-      div{
-        width:48%;
-        background-color:#e3e3e3;
-        padding:1rem;
-      }
+    .crowdfundbtn{
+      margin-top: 2em ;
+      padding: 0.5em;
+      font-size: 0.9em;
+      max-width: 10em;
+      text-align: center;
+      background-color: #1f363d;
+      color: white;
+      border-radius: 10px;
+      border: 0px;
+      cursor: pointer;
     }
-}
+    .crowdfundbtn:hover{
+      transform: translate(0px, 2px);
+    }
+  }
+  
+  h1, h2, h3, h4, h5, h6{
+    font-family:'Overpass', sans-serif !important;
+  }
 
-<<<<<<< HEAD
+  p{
+    font-family: 'Martel', serif !important;
+  }
 
-=======
-// New Updates
-
-.crowdfundbtn{
-  background-color: green;
-  color: white !important;
-  border-radius: 5px ;
-  margin: 0.5rem;
-}
-
-.crowdfundbtn:hover{
-  background-color: #0d0 !important;
-}
-
-.homewrapper
-{
-		max-width:75%;
-		padding:2px;
-		margin:auto;
-    padding:1em;
-    font-size: 1.4rem;
-
-    .introText{
-      max-width: 80%;
+  .introText{
+    max-width: 80%;
+    font-family:'Titillium Web', sans-serif !important;
 
       .smallIntro{
         padding: 1rem 0;
@@ -434,14 +429,16 @@ input[type="number"]::-webkit-outer-spin-button {
       div{
         width:48%;
         background-color:#e3e3e3;
+        border: solid 3px #e3e3e3;
         padding:1rem;
+		    transition:all 0.5s linear;
         cursor: pointer;
         *{
           pointer-events: none;
         }
       }
       div:hover{
-        box-shadow: 2px 2px 2px 2px gray !important;
+			  border-color:#bbb;
       }
     }
 
@@ -449,30 +446,6 @@ input[type="number"]::-webkit-outer-spin-button {
       .tnctext{
         font-size: 1rem;
         margin-bottom: 0.5rem;
-      }
-      #graphs {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        // justify-content: center;
-        align-items: stretch;
-        .graphbox {
-          border-style: solid;
-          border-radius: 4px;
-          border-width: thin;
-          text-align: center;
-          vertical-align: middle;
-          height: 10rem;
-          width: 10rem;
-          margin: 0 0.5rem 0.5rem 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        .graphnumbers {
-          font-weight: bold;
-          font-size: 1.3rem;
-        }
       }
     }
 
@@ -487,10 +460,10 @@ input[type="number"]::-webkit-outer-spin-button {
         flex-wrap: wrap;
         justify-content: space-between;
         .imgcap{
-          max-width: 300px;
+          max-width: 250px;
           height: auto;
-          border: 1px solid #05e;
-          border-radius: 10px;
+          border: 1px solid #888;
+          border-radius: 4px;
           padding: 0.5em;
           margin-bottom: 5px;
           img{
@@ -508,10 +481,17 @@ input[type="number"]::-webkit-outer-spin-button {
       .our_bit{
         margin-top: 0.8rem; 
       }
+
+	  ol {
+
+		margin-left:0.75em;
+
+
+	  }
+
     }
     
 }
->>>>>>> 4c7db94207960bd8c32c1282a21de1ca2d479934
 
 
 //Added for Width
@@ -553,52 +533,43 @@ input[type="number"]::-webkit-outer-spin-button {
 
 @media screen and (max-width: 769px) {
 
-<<<<<<< HEAD
-=======
   .section{
     padding: 0;
   }
 
-  .crowdfundbtn{
-    display: none !important;
-  }
-
->>>>>>> 4c7db94207960bd8c32c1282a21de1ca2d479934
   .hero-wrapper{
     padding: 0 !important;
   }
   .homewrapper
 {
-		max-width:100%;
-		padding:0px;
-		margin:auto;
-<<<<<<< HEAD
-    font-size: 1.2rem;
-=======
-    font-size: 1rem;
->>>>>>> 4c7db94207960bd8c32c1282a21de1ca2d479934
+  max-width:100%;
+  padding:0px;
+  margin:auto;
+  font-size: 1rem;
+  .introScreen{
+    margin-top: 4em;
+  }
+  .introText{
+    max-width: 100%;
 
-    .introText{
-      max-width: 100%;
-
-      .smallIntro{
-        padding: 0.5em 0;
-      }
+    .smallIntro{
+      padding: 0.5em 0;
+    }
       
-      .largerIntro{
-        font-size: 1.3em;
-        padding: 0.5em 0;
-      }
-    }
-
-    .heading_main{
+    .largerIntro{
       font-size: 1.3em;
-      padding: 1em 0 0.5em 0;
+      padding: 0.5em 0;
     }
+  }
 
-    #homemainlinks{
-      display:flex;
-      flex-direction: column;
+  .heading_main{
+    font-size: 1.3em;
+    padding: 1em 0 0.5em 0;
+  }
+
+  #homemainlinks{
+    display:flex;
+    flex-direction: column;
 
       div{
         width:100%;
@@ -607,8 +578,6 @@ input[type="number"]::-webkit-outer-spin-button {
         padding:1rem;
       }
     }
-<<<<<<< HEAD
-=======
     #homestat{
       .tnctext{
         font-size: 1rem;
@@ -639,6 +608,5 @@ input[type="number"]::-webkit-outer-spin-button {
         }
       }
     }
->>>>>>> 4c7db94207960bd8c32c1282a21de1ca2d479934
 }
 }
