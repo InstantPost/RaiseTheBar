@@ -75,6 +75,34 @@ document.querySelector("body").addEventListener("click", event => {
   }
 });
 
+
+document.querySelector("#homemainlinks").addEventListener("click", (event) => {
+  const tab = event.target.getAttribute("data-href");
+  console.log(tab)
+  if (!tab) return;
+  if (tab == "home") id("search_input_container").style.display = "none";
+  else id("search_input_container").style.display = "flex";
+  Array.from(cls("navbar-item")).forEach((el) => {
+    el.classList = "navbar-item is-white has-text-grey";
+  });
+  event.target.classList = "navbar-item is-white has-text-primary active-tab-link";
+  Array.from(cls("tab")).forEach((el) => {
+    el.classList.remove("active");
+  });
+  id("search_input").setAttribute("data-entity", tab);
+  document.querySelector(`#${tab}`).classList += " active";
+  document.querySelector(".burger").click();
+
+});
+
+document.querySelector("body").addEventListener("mouseover", (event) => {
+  const target = event.target;
+  if (target.classList.contains("link")) {
+    var text = event.target.innerText;
+    target.setAttribute("title", text);
+  }
+});
+
 document.querySelector("body").addEventListener("mouseover", event => {
   const target = event.target;
   if (target.classList.contains("link")) {
