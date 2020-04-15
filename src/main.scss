@@ -368,11 +368,15 @@ input[type="number"]::-webkit-outer-spin-button {
     h2{
       font-family:'Titillium Web', sans-serif !important;
       font-weight: 700;
-      font-size: 2rem;
+      font-size: 3rem;
+      color: #1f363d;
+    }
+    p{
+      font-family:'Overpass', sans-serif !important;
       color: #1f363d;
     }
     .crowdfundbtn{
-      margin-top: 2em ;
+      margin-top: 1em ;
       padding: 0.5em;
       font-size: 0.9em;
       max-width: 10em;
@@ -547,7 +551,16 @@ input[type="number"]::-webkit-outer-spin-button {
   margin:auto;
   font-size: 1rem;
   .introScreen{
-    margin-top: 4em;
+    margin-top: 10em;
+    // .bgimg{
+    // }
+    h2{
+      font-size: 2em;
+    }
+    // p{
+    // }
+    // .crowdfundbtn{
+    // }
   }
   .introText{
     max-width: 100%;
