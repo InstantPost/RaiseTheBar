@@ -1,359 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RaiseTheBar</title>
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>RaiseTheBar</title>
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="shortcut icon" type="image/png"
-        href="https://raw.githubusercontent.com/InstantPost/RaiseTheBar/dev/src/assets/favicon.png" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+						integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="shortcut icon" type="image/png"
+						   href="https://raw.githubusercontent.com/InstantPost/RaiseTheBar/dev/src/assets/favicon.png" />
 
-</head>
+  </head>
 
-<body>
-    <div id="loader-overlay">
-        <div class="loader"></div>
-    </div>
-    <div id="modal" class="modal">
-        <div id="modal-background" class="modal-background"></div>
-        <div id="modal-content" class="modal-content">
-        </div>
-        <button id="modal-close" class="modal-close is-large" aria-label="close"></button>
-    </div>
-    <div class="section transparent is-paddingless">
-        <div id="main" class="section transparent">
-            <div class="container has-background-white">
-                <div class="hero-head ">
-                    <nav class="navbar is-fixed-top">
-                        <div class="navbar-brand shadowless">
-                            <a class="navbar-item" href="/raisethebar">
-                                <img
-                                    src="https://raw.githubusercontent.com/InstantPost/RaiseTheBar/dev/src/assets/favicon.png">
-                                <img src="https://instantpost.org/logo.png" class="nav-logo">
-                            </a>
-                            <a id="refresh" href="/raisethebar">
-                                <i class="fas fa-sync-alt" style="font-size: 18px;"></i>
-                            </a>
-                            <span class="navbar-burger burger is-centered" data-target="navMenu">
-                                <span></span>
-                                <span></span>
-                                <span>
-                                </span>
-                            </span>
-                        </div>
-                        <div id="navMenu" class="navbar-menu transparent">
-                            <div class="navbar-end">
-                                <div class="navbar-item">
-                                    <a data-href="doctor" class=" navbar-item is-white has-text-grey">
-                                        Doctors
-                                    </a>
-                                    <a data-href="printer" class=" navbar-item is-white has-text-grey">
-                                        3D-Printers
-                                    </a>
-                                    <a data-href="requirement" class=" navbar-item is-white has-text-grey">
-                                        Requirements
-                                    </a>
-                                    <a data-href="manufacturer" class=" navbar-item is-white has-text-grey ">
-                                        Manufacturers
-                                    </a>
-                                    <a data-href="commodity" class=" navbar-item is-white has-text-grey">
-                                        Projects
-                                    </a>
-                                    <a data-href="volunteer" class=" navbar-item is-white has-text-grey">
-                                        Volunteers
-                                    </a>
-                                    <a class=" navbar-item is-white has-text-grey" id="login_btn">Login</a>
-                                    <a id="logout_btn" class=" navbar-item is-white has-text-grey">
-                                        Logout
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
+  <body>
+	<div id="loader-overlay">
+	  <div class="loader"></div>
+	</div>
+	<div id="modal" class="modal">
+	  <div id="modal-background" class="modal-background"></div>
+	  <div id="modal-content" class="modal-content">
+	  </div>
+	  <button id="modal-close" class="modal-close is-large" aria-label="close"></button>
+	</div>
+	<div class="section transparent is-paddingless">
+	  <div id="main" class="section transparent">
+		<div class="container has-background-white">
+		  <div class="hero-head ">
+			<nav class="navbar is-fixed-top">
+			  <div class="navbar-brand shadowless">
+				<a class="navbar-item" href="/raisethebar">
+				  <img
+		src="https://raw.githubusercontent.com/InstantPost/RaiseTheBar/dev/src/assets/favicon.png">
+				  <img src="https://instantpost.org/logo.png" class="nav-logo">
+				</a>
+				<a id="refresh" href="/raisethebar">
+				  <i class="fas fa-sync-alt" style="font-size: 18px;"></i>
+				</a>
+				<span class="navbar-burger burger is-centered" data-target="navMenu">
+				  <span></span>
+				  <span></span>
+				  <span>
+				  </span>
+				</span>
+			  </div>
+			  <div id="navMenu" class="navbar-menu transparent">
+				<div class="navbar-end">
+				  <div class="navbar-item">
+					<a data-href="doctor" class=" navbar-item is-white has-text-grey">
+					  Doctors
+					</a>
+					<a data-href="printer" class=" navbar-item is-white has-text-grey">
+					  3D-Printers
+					</a>
+					<a data-href="requirement" class=" navbar-item is-white has-text-grey">
+					  Requirements
+					</a>
+					<a data-href="manufacturer" class=" navbar-item is-white has-text-grey ">
+					  Manufacturers
+					</a>
+					<a data-href="commodity" class=" navbar-item is-white has-text-grey">
+					  Projects
+					</a>
+					<a data-href="volunteer" class=" navbar-item is-white has-text-grey">
+					  Volunteers
+					</a>
+					<a class=" navbar-item is-white has-text-grey" id="login_btn">Login</a>
+					<a id="logout_btn" class=" navbar-item is-white has-text-grey">
+					  Logout
+					</a>
+				  </div>
+				</div>
+			  </div>
+			</nav>
+		  </div>
+		</div>
+		<div class="content-container">
+		  <div id="home" class="hero-body tab active">
+			<div class="introScreen">
+			  <div class="bgimg"></div>
+			  <div>
+				<h2>Raise The Bar</h2>
+				<p>Back The Frontliners</p>
+			  </div>
+			  <div class="button_linear">
+				<button class="crowdfundbtn btn" onclick="window.location.href = '#crowdfund';">Pledge The Shield</button>
+				<button class="crowdfundbtn btn" onclick="window.location.href = '#gfs';">Get The Shield</button>
+			  </div>
+			</div>
+			<div class="introText">
+			  <p class="smallIntro">
+				It's important to flatten the curve,<br>
+				but it is equally important to <strong>Raise the Bar</strong>
+			  </p>
+			  <p class="largerIntro">
+				Raise The Bar strives to ignite the sense of togetherness and a combined setup to overcome the barriers imposed by COVID-19. We feel that the largest distributed but unified manufacturing setup can be built in India, if all of us join hands against a common calamity.
+			  </p>
+			  <p class="largerIntro">
+				Joining the initiative would invoke our network of manufacturers, suppliers and volunteers to ramp up and diversify the process because the motive here is to break the chain, and we envision to achieve that by creating India’s largest chain of manufacturers and suppliers on a common platform to <strong>Raise The Bar.</strong>
+			  </p>
+              <button id="imabtn" class="imabtn btn">I'm a</button>
+                <div id="allops">
+                    <div class="all_options">
+                        <button data-href="requirement" class="btn">Supplier</button>
+                        <button data-href="manufacturer" class="btn">Manufacturer</button>
+                        <button data-href="volunteer" class="btn">Volunteer</button>
+                    </div>
                 </div>
-            </div>
-            <div class="content-container">
-                <div id="home" class="hero-body tab active">
-                    <div class="homewrapper">
-                        <div class="introScreen">
-                            <div class="bgimg"></div>
-                            <h2>Raise The Bar</h2>
-                            <p>Back The Frontliners</p>
-                            <button class="crowdfundbtn" onclick="window.location.href = '#crowdfund';">Pledge Now</button>
-                        </div>
-                        <div class="introText">
-                            <p class="smallIntro">
-                                It's important to flatten the curve,<br>
-                                but it is equally important to <strong>Raise the Bar</strong>
-                            </p>
-                            <p class="largerIntro">
-                                RaiseTheBar would like to invoke the 3D printing community across the country to join the initiative :<br>
-								<strong>Creating the largest possible distributed manufacturing setup to fight COVID.</strong>
-                            </p>
-                        </div>
-                        
-                        <h3 class="heading_main">Get a Face Shield</h3>
+			</div>
+			<div class="bonum">
+			  <p class="smallIntro">
+				A battle of <strong>numbers vs numbers</strong>
+			  </p>
+			  <p class="largerIntro">
+				While we do everything that we can to overcome this pandemic - the numbers are increasing. And this is where our focus is to Raise the Bar by increasing our capacity to equip our heroes at the frontline with equipment that saves them from the infection as well as made available at a reasonable price.
+			  </p>
+			  <p class="largerIntro">
+				Joining the initiative would invoke our network of manufacturers, suppliers and volunteers to ramp up and diversify the process because the motive here is to break the chain, and we envision to achieve that by creating India’s largest chain of manufacturers and suppliers on a common platform to <strong>Raise The Bar.</strong>
+			  </p>
+			  <h4>Project Statistics</h4>
+			  <p class="largerIntro">
+				We need to print 1000s of face shields every minute and make them available across India for the frontliners.
+			  </p>
+			  <div id="graphs">
+			  </div>	
+			</div>
+			<div class="introText">
+			  <p class="smallIntro">
+				About <strong>Raise the Bar</strong>
+			  </p>
+			  <p class="largerIntro">
+				While we are a much larger team of individuals and startups, we should take note of Heros among us like Aayush Basavesh, Co-founder at Xtrogenesis Technology, and Shakthivel R who help the initiative in Bangalore with On ground support. They are helping with procurement, logistics, donations, and everything else that needs to happen in person. Each of their contributions involves the risk of infection, and it's important to recognize what they are doing for the whole initiative.
+			  </p>
+			  <p class="largerIntro">
+				RaiseTheBar would like to invoke the 3D printing community across the country to join the initiative to create the largest possible distributed manufacturing setup to fight COVID. Check the projects tab to learn more about our production process. We are releasing as many details as we can for everyone else to start the organized manufacturing of 3D printed face shields.
 
-                        <div id="homemainlinks">
-                            <div id="docs" data-href="doctor">
-                                <p><strong>For Doctors &#8594</strong></p>
-                                <p>Post your requirements on the Doctor's Tab</p>
-                            </div>
-                            <div id="nondocs" data-href="requirement">
-                                <p><strong>For Everyone Else &#8594</strong></p>
-                                <p>Post your requirements on the Requirement's Tab</p>
-                            </div>
-                        </div>
 
-                        <div id="homestat">
-                            <h3 class="heading_main">Project Stats</h3>
-                            <p class="tnctext">We need to print 1000s of face shields every minute and make them available across India for the frontliners.</p>
-                            <div id="graphs">
-                            </div>	
-                        </div>
+				We are being joined by Startups and Individuals every day to fulfill all kinds of roles like engineering, designing, software, medical advice, marketing, and many others. Join us today by posting on the volunteers or 3D-Printers tab and help in whatever way possible at your end to expand our production capability.
+			  </p>
+			  <p class="largerIntro">
+				We are being joined by Startups and Individuals every day to fulfill all kinds of roles like engineering, designing, software, medical advice, marketing, and many others. Join us today by posting on the volunteers or 3D-Printers tab and help in whatever way possible at your end to expand our production capability.
+			  </p>
+			  <div class="contain">
+				<div class="herosImage">
+				  <div class="imgcap">
+					<img src="https://instantpost.org/donation-1.jpg">
+					<figcaption>One of the medical worker who has already received benefit from <b>RaiseTheBar</b> Initiative</figcaption>
+				  </div>
+				  <div class="imgcap">
+					<img src="https://instantpost.org/donation-2.jpg">
+					<figcaption><b>Aayush Basavesh</b>, Co-founder at <a href="https://www.xtrogenesistechnology.com/">Xtrogenesis Technology</a> helping with packaging of the shields along with <b>Shakthivel R</b></figcaption>
+				  </div>
+				  <div class="imgcap">
+					<img src="https://instantpost.org/donation-3.jpg">
+					<figcaption>Some the initially printed face shields way early in March itself</figcaption>
+				  </div>
+				  <div class="imgcap">
+					<img src="https://instantpost.org/donation-4.jpg">
+					<figcaption><b>Aayush Basavesh</b>, Co-founder at <a href="https://www.xtrogenesistechnology.com/">Xtrogenesis Technology</a> making the donation</figcaption>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="ourbit">
+			  <p class="smallIntro">
+				We are doing our bit by developing this free to dashboard to connect all of us together.
+			  </p>
+			  <h4>Why?</h4>
+			  <p class="largerIntro">
+				It's important to have publicly accessible information for people who are searching for it<br>
+				Lack of information means lack of competition which leads to increase in prices of essential commodities<br>
+				Doctors and other essential services staff like doctors have no clue about cost of production so cannot negoatiate<br>
+				There is a huge gap between demand and supply of essential goods for medical staff, which is putting pressure on doctors to work in unsafe conditions
+			  </p>
+			  <h4>How?</h4>
+			  <p class="largerIntro">
+				RaiseTheBar is a digital dashboard that works as ecommerce portal for COVID suppliers to showcase their capabilities and inventory. Please use the Manufacturers tab to showcase.<br>
+				RaiseTheBar is a digital dashboard that works as reverse ecommerce portal for doctors to post their COVID specific requirements for suppliers and manufactures to contact them. Please use the Doctors tab to highlight your requirements.<br>
+				RaiseTheBar is a digital dashboard that works as reverse ecommerce portal for everyone else to post their COVID specific requirements for suppliers and manufactures to contact them. Please use the requirements tab if you not a doctor.<br>
+				RaiseTheBar is an initiative to share the complete production process and the cost of production for everyone to make sure doctors are aware of it and can properly decide how much they should be paying for it<br>
+				RaiseTheBar is an initiative to bring the best out of the 3D printing community in India to help doctors.
+			  </p>
+			  <h4>What?</h4>
+			  <p class="largerIntro">
+				We have set up the minimum dashboard at InstantPost and are adding more volunteer support to improve the dashboard. If you want to join us, please post your details on the Volunteers tab and we will contact you as more help is needed.<br>
+				We have set up a minimum team of doctors and mechanical designers who are designing the minimum possible tools and equipment that can be easily 3D printed. We are adding these designs and also the ones we find in open source on the projects tab. If you are a mechanical designer or doctor who wants to join, please post your details on the volunteers tab and we will contact you as more help is needed.<br>
+				At InstantPost, we are dedicating the complete 3D printing capacity to print 1 face shield frame every 5 minutes. All these frames as part of the RaiseTheBar initiative will be donated to doctors, hospitals, police and other relevant individuals who are right now working on the frontline fighting COVID-19.
 
-                        <div class="about">
-                            <h3 class="heading_main">About <strong>RaiseTheBar</strong></h3>
-                            <div class="herosData">
-                                <h4 class="heading_second">Our Heroes on the ground</h4>
-                                <p>While we are a much larger team of individuals and startups, we should take note of Heros amoung us like <b>Aayush Basavesh, Co-founder at <a href="https://www.xtrogenesistechnology.com/">Xtrogenesis Technology</a></b> and <b>Shakthivel R</b> who help the initiative in Bangalore with On ground support. They are helping with procurement, logistics, donations and everything else that needs to happen in person. Each of their contributions involve the risk of
-                                infection and it's important to recognise what they are doing for the whole initiative.</p>
-                                <p><b>RaiseTheBar</b> would like to invoke the 3D printing community across the country to join
-                                the initiative to create the largest possible distributed manufacturing setup
-                                to fight COVID. Check the <b>projects tab</b> to learn more about our production process.
-                                We are releasing as much details as we can for everyone else to start organised manufacturing of 3D
-                                printed face shields.</p>
-                                <p>We are being joined by Statups and Individuals everyday to fulfill all kind of roles like
-                                engineering, designing, software, medical advice, marketing and many others. Join us today by
-                                posting on the volunteers or 3D-Printers tab and help in whatever way possible at your end to expand
-                                out production capability.</p>
-                            </div>
-                            <div class="herosImage">
-                                <div class="imgcap">
-                                    <img src="https://instantpost.org/donation-1.jpg">
-                                    <figcaption>One of the medical worker who has already received benefit from <b>RaiseTheBar</b> Initiative</figcaption>
-                                </div>
-                                <div class="imgcap">
-                                    <img src="https://instantpost.org/donation-2.jpg">
-                                    <figcaption><b>Aayush Basavesh</b>, Co-founder at <a href="https://www.xtrogenesistechnology.com/">Xtrogenesis Technology</a> helping with packaging of the shields along with <b>Shakthivel R</b></figcaption>
-                                </div>
-                                <div class="imgcap">
-                                    <img src="https://instantpost.org/donation-3.jpg">
-                                    <figcaption>Some the initially printed face shields way early in March itself</figcaption>
-                                </div>
-                                <div class="imgcap">
-                                    <img src="https://instantpost.org/donation-4.jpg">
-                                    <figcaption><b>Aayush Basavesh</b>, Co-founder at <a href="https://www.xtrogenesistechnology.com/">Xtrogenesis Technology</a> making the donation</figcaption>
-                                </div>
-                            </div>
-                            <p class="our_bit">We are doing our bit by developing this free to dashboard to connect all of us together.</p>
-                            <h4 class="heading_second">Why?</h2>
-                            <ol>
-                                <li>It's important to have <b>publicly accessible information</b> for people who are searching
-                                    for it</li>
-                                <li>Lack of information means lack of competition which leads to <b>increase in prices</b> of
-                                    essential commodities</li>
-                                <li>Doctors and other essential services staff like doctors have no clue about <b>cost of
-                                        production</b> so cannot negoatiate</li>
-                                <li>There is a <b>huge gap between demand and supply</b> of essential goods for medical staff,
-                                    which is putting pressure on doctors to work in unsafe conditions</li>
-                            </ol>
-                            <h4 class="heading_second">How?</h2>
-                            <ol>
-                                <li>RaiseTheBar is a digital dashboard that works as <b>ecommerce</b> portal for COVID suppliers
-                                    to showcase their capabilities and inventory. Please use the Manufacturers tab to showcase.
-                                </li>
-                                <li>RaiseTheBar is a digital dashboard that works as <b>reverse ecommerce</b> portal for doctors
-                                    to post their COVID specific requirements for suppliers and manufactures to contact them.
-                                    Please use the Doctors tab to highlight your requirements.</li>
-                                <li>RaiseTheBar is a digital dashboard that works as <b>reverse ecommerce</b> portal for
-                                    everyone else
-                                    to post their COVID specific requirements for suppliers and manufactures to contact them.
-                                    Please use the requirements tab if you not a doctor.</li>
-                                <li>RaiseTheBar is an initiative to share the complete <b>production process and the cost of
-                                        production</b> for everyone to make sure doctors are aware of it and can properly decide
-                                    how much they should be paying for it</li>
-                                <li>RaiseTheBar is an initiative to bring the best out of the 3D printing community in India to
-                                    help doctors.</li>
-                            </ol>
-                            <h4 class="heading_second">What?</h2>
-                            <ol>
-                                <li>We have set up the minimum dashboard at InstantPost and are adding more volunteer support to improve the dashboard. If you want to join us, please post your details on the Volunteers tab and we will contact you as more help is needed.</li>
-                                <li>We have set up a minimum team of doctors and mechanical designers who are designing the minimum possible tools and equipment that can be easily 3D printed. We are adding these designs and also the ones we find in open source on the projects tab. If you are a mechanical designer or doctor who wants to join, please post your details on the volunteers tab and we will contact you as more help is needed.</li>
-                                <li>At InstantPost, we are dedicating the complete 3D printing capacity to print 1 face shield frame every 5 minutes. All these frames as part of the RaiseTheBar initiative will be donated to doctors, hospitals, police and other relevant individuals who are right now working on the frontline fighting COVID-19.</li>
-                            </ol>
-                        </div>
-                    </div>
-                    <div id="crowdfund">
-                        <h1 class="title is-4">
-                            Crowdfunding Now !
-                        </h1>
-                        <p>The <b>Face Shield Project</b> under <b>RaiseTheBar</b> initiative is crowdfunding now. Please transfer funds to the below mentioned account:<br /> <br /></p>
-                        <ol>
-                            <li><b>Name: AAYUSH BASAVESH</b></li>
-                            <li><b>Account Number: 881029234295</b></li>
-                            <li><b>MMID: 9641638</b></li>
-                            <li><b>VPA: <a href="upi://pay?pa=aayushbasavesh@dbs&pn=digiSavings">aayushbasavesh@dbs</a></b></li>
-                            <li><b>Bank name: DBS Bank</b></li>
-                            <li><b>Bank IFSC: DBSS0IN0811</b></li>
-                        </ol><br />
-                        Scan the QR code to fund the project now<br />
-                        <img style="max-width: 200px; max-height: 200px" src="https://instantpost.org/crowdfundaccount.jpeg"/><br />
-                        <ol>
-                            <li>A contribution as small as <b>Rs. 50</b> also makes a difference by allowing us to donate <b>1 face shield</b> to a doctor.</li>
-                            <li>If you fund the project with <b>Rs. 500</b> we will donate <b>10 face shields</b> to the doctors.</li>
-                            <li>If you fund the project with <b>Rs. 1000</b> we will donate <b>20 face shields</b> to the doctors.</li>
-                            <li>If you fund the project with <b>Rs. 10000</b> we will donate <b>200 face shields</b> to the doctors.</li>
-                            <!--li>We are working hard to formalise the structure at InstantPost to accept contributions as donations directly into the company account, but this will take time and virus won't wait. We will be formal by the time we get to the first milestone.</li-->
-                        </ol><br />
-                        <b>Latest contributions</b><br />
-                        <ol>
-                            <li>₹300</li>
-                            <li>₹1000</li>
-                            <li>₹100</li>
-                            <li>₹5000</li>
-                            <li>₹100</li>
-                            <li>₹500</li>
-                            <li>₹500</li>
-                        </ol>
-                    </div>
-                    <div class="data-wrapper">
-                        <div class="data-container " id="">
-                            <div id="activevol" class="data-obj-container" id="volunteers_data">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="search_input_container" class="search_bar">
-                    <div class=" field has-addons">
-                        <div class="control has-icons-left">
-                            <input id="search_input" data-entity="doctor" class="search_bar_input input" type="text"
-                                placeholder="Find by Pincode or City">
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-search"></i>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab " id="doctor">
-                    <div id="vol_prompt" class="volunteer-btn-container notification is-primary is-light">
-                        <span>
-                            Thank You Doctors !!<br />
-                            If you are looking for supplies or services<br />
-                            We will try and help you connect with them<br /> <br />
-                        </span>&nbsp;
-                        <button id="doctor_init" class="button is-primary is-small init_button">
-                            Post a requirement
-                        </button>
-                    </div>
-                    <div class="data-wrapper">
-                        <div class="data-container " id="">
-                            <div id="doctors_data" class="data-obj-container"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab" id="requirement">
-                    <div id="vol_prompt" class="volunteer-btn-container notification is-primary is-light">
-                        <span>
-                            Are you looking for supplies to fight COVID ?<br />
-                            Post your requirement for everyone to directly contact you<br /><br />
-                        </span>&nbsp;
-                        <button id="requirement_init" class="button is-primary is-small init_button">
-                            Add your requirement
-                        </button>
-                    </div>
-                    <div class="data-wrapper">
-                        <div class="data-container " id="">
-                            <div id="requirements_data" class="data-obj-container"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab " id="manufacturer">
-                    <div id="vol_prompt" class="volunteer-btn-container notification is-primary is-light init_button">
-                        <span>
-                            Can you manufacture large quantities of equipment/goods to fight COVID ?<br />
-                            Post the details for doctors and everyone else to directly contact you<br /><br />
-                        </span>&nbsp;
-                        <button id="manufacturer_init" class="button is-primary is-small init_button">
-                            Add your manufacturing unit
-                        </button>
-                    </div>
-                    <div class="data-wrapper">
-                        <div class="data-container " id="">
-                            <div id="manufacturers_data" class="data-obj-container"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab " id="printer">
-                    <div id="vol_prompt" class="volunteer-btn-container notification is-primary is-light init_button">
-                        <span>
-                            Are you 3D printing supplies for COVID ?<br />
-                            Post the details for doctors and everyone else to directly contact you<br /><br />
-                        </span>&nbsp;
-                        <button id="printer_init" class="button is-primary is-small init_button">
-                            Add your 3D Printers
-                        </button>
-                    </div>
-                    <div class="data-wrapper">
-                        <div class="data-container " id="">
-                            <div id="printers_data" class="data-obj-container"></div>
+			  </p>
+			</div>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="tab " id="commodity">
-                    <div id="vol_prompt" class="volunteer-btn-container notification is-primary is-light init_button">
-                        <span>
-                            Are you working on projects related to COVID ?<br />
-                            Post relevant details about the project here for volunteers to contact you<br /><br />
-                        </span>&nbsp;
-                        <button id="commodity_init" class="button is-primary is-small init_button">
-                            Post a Project
-                        </button>
-                    </div>
-                    <div class="data-wrapper">
-                        <div class="data-container " id="">
-                            <div id="commodities_data" class="data-obj-container"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab " id="volunteer">
-                    <div id="vol_prompt" class="volunteer-btn-container notification is-primary is-light">
-                        <span>
-                            Submit your details to join a team of volunteers fighting COVID<br />
-                            We will advertise your post to teams we know and they might contact you directly to join
-                            them<br /><br />
-                        </span>&nbsp;
-                        <button id="volunteer_init" class="button is-primary is-small init_button">
-                            Be a volunteer
-                        </button>
-                    </div>
-                    <div class="data-wrapper">
-                        <div class="data-container " id="">
-                            <div id="volunteers_data" class="data-obj-container"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer class="footer is-paddingless shadowless">
-            <div class="box transparent">
-                <div class="content has-text-centered transparent">
-                    <p class="is-4">
-                        <strong class="name logo has-text-grey">
-                            An Initiative by</strong>
-                        <span class="name logo has-text-black is-bold"><a target="_blank" href="https://instantpost.in"
-                                class="has-text-grey logo">InstantPost &trade;</a></span>
-                    </p>
-                </div>
-            </div>
-        </footer>
-    </div>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-</body>
+			<div id="crowdfund">
+			  <p class="smallIntro">
+				Crowdfunding Now !
+              </p>
+			  <p class="largerIntro">The <b>Face Shield Project</b> under <b>RaiseTheBar</b> initiative is crowdfunding now. Please transfer funds to the below mentioned account:<br /> <br /></p>
+			  <ol id="contactdeets">
+				<li><b>Name: </b>AAYUSH BASAVESH</li>
+				<li><b>Account Number: </b>881029234295</li>
+				<li><b>MMID: </b>9641638</li>
+				<li><b>VPA: </b><a href="upi://pay?pa=aayushbasavesh@dbs&pn=digiSavings">aayushbasavesh@dbs</a></li>
+				<li><b>Bank name: DBS Bank</b></li>
+				<li><b>Bank IFSC: DBSS0IN0811</b></li>
+			  </ol><br />
+			  <h2 id="crowdfundh2">
+				Scan the QR code to fund the project now.
+			  </h2>
+			  <img style="max-width: 200px; max-height: 200px" src="https://instantpost.org/crowdfundaccount.jpeg"/><br />
+			  <ol id="usm">
+				<li>A contribution as small as <b>Rs. 50</b> also makes a difference by allowing us to donate <b>1 face shield</b> to a doctor.</li>
+				<li>If you fund the project with <b>Rs. 500</b> we will donate <b>10 face shields</b> to the doctors.</li>
+				<li>If you fund the project with <b>Rs. 1000</b> we will donate <b>20 face shields</b> to the doctors.</li>
+				<li>If you fund the project with <b>Rs. 10000</b> we will donate <b>200 face shields</b> to the doctors.</li>
+				<!--li>We are working hard to formalise the structure at InstantPost to accept contributions as donations directly into the company account, but this will take time and virus won't wait. We will be formal by the time we get to the first milestone.</li-->
+			  </ol><br />
+			  <ol id="latestcontribs">
+				<li><b>Latest contributions : </b></li>
+				<li>₹300</li>
+				<li>₹1000</li>
+				<li>₹100</li>
+				<li>₹5000</li>
+				<li>₹100</li>
+				<li>₹500</li>
+				<li>₹500</li>
+			  </ol>
+			</div>
+
+			<div class="bonum" id="gfs">
+			  <p class="smallIntro">Get the <b>Face Shield</b></p>
+
+			  <div id="homemainlinks" class="parabut">
+				<button id="docs" data-href="doctor" class="btn">For DOCTORS</button>
+				<button id="nondocs" data-href="requirement" class="btn">For EVERYONE ELSE</button>
+			  </div>
+			  <div>
+				<p class="largerIntro">
+				  At Raise the Bar, we have always stood by our values of contribution, creation and cooperation to overcome every hurdle that comes our way. However, things move differently when we have bigger challenges to address and making resources accessible to those in need irrespective of the donations and availability of funds.
+				</p>
+				<p class="largerIntro">
+				  Thus, after putting a lot of thought behind making shields available across boundaries - we’ve zeroed down upon a basic pricing model to cater individual and organisational requirements, alike and thus - making the initiative more universal and relevant to the common interest. So, now when you stumble upon Raise the Bar - you will be able to get the shields shipped directly to your address irrespective of our emphasis upon contribution - because we understand that the disease doesn’t understand the cause nor does it waits for the same.
+				</p>
+				<p class="largerIntro">
+				  So, now when you post a requirement - and make a payment, be rest assured that the shields will reach you irrespective  of the barriers of boundaries and logistics.
+				</p>
+				<p class="largerIntro">
+				  The process is continuous, but then - worth it. Moreover, we’ll be keeping a reasonable profit on every shield sold because it is important to drive the initiative in a way that is self sustaining and not dependent upon external factors for its operations.
+				</p>
+			  </div>
+			</div>
+			<!-- <div class="data-wrapper">
+			  <div class="data-container " id="">
+				<div id="activevol" class="data-obj-container" id="volunteers_data">
+				</div>
+			  </div>
+			</div> -->
+		  </div>
+		  <div id="search_input_container" class="search_bar">
+			<div class=" field has-addons">
+			  <div class="control has-icons-left">
+				<input id="search_input" data-entity="doctor" class="search_bar_input input" type="text"
+																				 placeholder="Find by Pincode or City">
+				<span class="icon is-small is-left">
+				  <i class="fas fa-search"></i>
+				</span>
+			  </div>
+			</div>
+		  </div>
+		  <div class="tab " id="doctor">
+			<div id="vol_prompt" class="volunteer-btn-container notification is-primary is-light">
+			  <span>
+				Thank You Doctors !!<br />
+				If you are looking for supplies or services<br />
+				We will try and help you connect with them<br /> <br />
+			  </span>&nbsp;
+			  <button id="doctor_init" class="button is-primary is-small init_button">
+				Post a requirement
+			  </button>
+			</div>
+			<div class="data-wrapper">
+			  <div class="data-container " id="">
+				<div id="doctors_data" class="data-obj-container"></div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="tab" id="requirement">
+			<div id="vol_prompt" class="volunteer-btn-container notification is-primary is-light">
+			  <span>
+				Are you looking for supplies to fight COVID ?<br />
+				Post your requirement for everyone to directly contact you<br /><br />
+			  </span>&nbsp;
+			  <button id="requirement_init" class="button is-primary is-small init_button">
+				Add your requirement
+			  </button>
+			</div>
+			<div class="data-wrapper">
+			  <div class="data-container " id="">
+				<div id="requirements_data" class="data-obj-container"></div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="tab " id="manufacturer">
+			<div id="vol_prompt" class="volunteer-btn-container notification is-primary is-light init_button">
+			  <span>
+				Can you manufacture large quantities of equipment/goods to fight COVID ?<br />
+				Post the details for doctors and everyone else to directly contact you<br /><br />
+			  </span>&nbsp;
+			  <button id="manufacturer_init" class="button is-primary is-small init_button">
+				Add your manufacturing unit
+			  </button>
+			</div>
+			<div class="data-wrapper">
+			  <div class="data-container " id="">
+				<div id="manufacturers_data" class="data-obj-container"></div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="tab " id="printer">
+			<div id="vol_prompt" class="volunteer-btn-container notification is-primary is-light init_button">
+			  <span>
+				Are you 3D printing supplies for COVID ?<br />
+				Post the details for doctors and everyone else to directly contact you<br /><br />
+			  </span>&nbsp;
+			  <button id="printer_init" class="button is-primary is-small init_button">
+				Add your 3D Printers
+			  </button>
+			</div>
+			<div class="data-wrapper">
+			  <div class="data-container " id="">
+				<div id="printers_data" class="data-obj-container"></div>
+
+			  </div>
+			</div>
+		  </div>
+		  <div class="tab " id="commodity">
+			<div id="vol_prompt" class="volunteer-btn-container notification is-primary is-light init_button">
+			  <span>
+				Are you working on projects related to COVID ?<br />
+				Post relevant details about the project here for volunteers to contact you<br /><br />
+			  </span>&nbsp;
+			  <button id="commodity_init" class="button is-primary is-small init_button">
+				Post a Project
+			  </button>
+			</div>
+			<div class="data-wrapper">
+			  <div class="data-container " id="">
+				<div id="commodities_data" class="data-obj-container"></div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="tab " id="volunteer">
+			<div id="vol_prompt" class="volunteer-btn-container notification is-primary is-light">
+			  <span>
+				Submit your details to join a team of volunteers fighting COVID<br />
+				We will advertise your post to teams we know and they might contact you directly to join
+				them<br /><br />
+			  </span>&nbsp;
+			  <button id="volunteer_init" class="button is-primary is-small init_button">
+				Be a volunteer
+			  </button>
+			</div>
+			<div class="data-wrapper">
+			  <div class="data-container " id="">
+				<div id="volunteers_data" class="data-obj-container"></div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <footer class="footer is-paddingless shadowless">
+		<div class="box transparent">
+		  <div class="content has-text-centered transparent">
+			<p class="is-4">
+			  <strong class="name logo has-text-grey">
+				An Initiative by</strong>
+			  <span class="name logo has-text-black is-bold"><a target="_blank" href="https://instantpost.in"
+																	   class="has-text-grey logo">InstantPost &trade;</a></span>
+			</p>
+		  </div>
+		</div>
+	  </footer>
+	</div>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </body>
 
 </html>

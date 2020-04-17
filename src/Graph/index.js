@@ -48,13 +48,13 @@ export function Graph()
     boxdata.forEach(
         function(x)
         {
-            let htmlstring = `<div class="graphbox" style="color:${x.color};border-color:${x.color}">
+            let htmlstring = `<div class="graphbox">
                                 <div>
-                                    ${x.name}
-                                    <br>
                                     <span class="graphnumbers">
                                         ${x.number}
                                     </span>
+                                    <br>
+                                    ${x.name}
                                 </div>
                             </div>`
 
