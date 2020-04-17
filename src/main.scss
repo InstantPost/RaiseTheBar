@@ -1,6 +1,8 @@
 @charset "utf-8";
 @import "~bulma/bulma";
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
 
 html{
 	scroll-behavior: smooth;
@@ -312,12 +314,12 @@ strong{
 #crowdfund{
 	text-align: center;
 	width: 100%;
-  padding: 0rem 0 4rem 0;
-  margin: 1em auto;
-  font-family:'Titillium Web', sans-serif !important;
+	padding: 0rem 0 4rem 0;
+	margin: 1em auto;
+	font-family:'Titillium Web', sans-serif !important;
 	ol{
 		list-style: none;
-  }
+ 	}
   .smallIntro{
 		max-width: 60%;
 		margin: auto;
@@ -447,7 +449,7 @@ strong{
 
 .introText{
 	width: 100%;
-	font-family:'Martel', sans-serif !important;
+	font-family:'Overpass', sans-serif !important;
 	background-color: #cfe0c3;
 	display: flex;
 	flex-direction: column;
@@ -539,7 +541,7 @@ strong{
 
 .bonum{
 	width: 100%;
-	font-family:'Martel', sans-serif !important;
+	font-family:'Overpass', sans-serif !important;
   background-color: #1f363d;
   padding-bottom: 5rem;
 
@@ -621,7 +623,7 @@ strong{
 
 .ourbit{
 	width: 100%;
-	font-family:'Martel', sans-serif !important;
+	font-family:'Overpass', sans-serif !important;
 	background-color: #70a9a1;
 
 	.smallIntro{
