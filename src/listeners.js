@@ -90,6 +90,11 @@ document.querySelector("body").addEventListener("click", event => {
       flagima=0;
     }
   }
+  if(target.id=="backtotop")
+  {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
 });
 
 
@@ -144,5 +149,16 @@ document.querySelector("body").addEventListener("mouseover", event => {
   if (target.classList.contains("link")) {
     var text = event.target.innerText;
     target.setAttribute("title", text);
+  }
+});
+
+
+var mybutton=document.getElementById("backtotop");
+
+document.addEventListener("scroll", (event) => {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "flex";
+  } else {
+    mybutton.style.display = "none";
   }
 });
