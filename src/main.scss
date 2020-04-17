@@ -279,7 +279,7 @@ strong{
 		flex-direction: column;
 		align-items: center;
 		.obj-details-photos {
-			width: 80%;
+			width: 60%;
 			display: flex;
 			overflow: auto;
 		}
@@ -298,7 +298,7 @@ strong{
 
 .modal-content {
 	img {
-		width: 80%;
+		width: 60%;
 	}
 }
 
@@ -314,7 +314,7 @@ strong{
 		list-style: none;
   }
   .smallIntro{
-		max-width: 80%;
+		max-width: 60%;
 		margin: auto;
 		font-size: 2rem;
 		padding: 5rem 0 2rem 0;
@@ -323,7 +323,7 @@ strong{
 
 	.largerIntro{
 		margin: auto;
-		max-width: 80%;
+		max-width: 60%;
 		font-size: 1rem;
 		padding: 1rem 0;
 		line-height: 2;
@@ -356,20 +356,26 @@ strong{
 }
 // New Updates
 
+.btn{
+	padding: 0.5em;
+	font-size: 1.3em;
+	width: 10em;
+}
+
 .btn:hover{
   transform: translate(0px, 2px);
 }
 
 .introScreen{
 
-	max-width:75%;
+	max-width:60%;
 	margin: auto;
 	height: 100vh;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: center;
 	.bgimg{
 		position: absolute;
 		top: 0;
@@ -377,7 +383,6 @@ strong{
 		background-image: url(./assets/bg.png);
 		background-size: cover;
 		background-attachment: fixed;
-		filter: blur(2px);
 		height: 100vh;
 		width: 100%;
 		z-index: -1;
@@ -392,16 +397,15 @@ strong{
 		font-size: 2.5rem;
 		font-family:'Overpass', sans-serif !important;
 		color: white;
+		padding-bottom: 2.5rem;
 	}
 	.button_linear{
 		display: flex;
 		justify-content: space-around;
+		flex-wrap: wrap;
 		width: 100%;
 		.crowdfundbtn{
 			margin-top: 1em ;
-			padding: 0.5em;
-			font-size: 0.9em;
-			width: 10em;
 			text-align: center;
 			background-color: #1f363d;
 			color: white;
@@ -423,7 +427,7 @@ strong{
 	color: #1f363d;
 
 	.smallIntro{
-		max-width: 80%;
+		max-width: 60%;
 		margin: auto;
 		font-size: 2rem;
 		padding: 5rem 0 2rem 0;
@@ -432,7 +436,7 @@ strong{
 
 	.largerIntro{
 		margin: auto;
-		max-width: 80%;
+		max-width: 60%;
 		font-size: 1rem;
 		padding: 1rem 0;
 		line-height: 2;
@@ -441,8 +445,6 @@ strong{
 	.imabtn{
 		margin: 1rem auto 2rem auto;
 		align-items: center;
-		padding: 0.5em;
-		font-size: 0.9em;
 		font-weight: bold;
 		width: 10em;
 		text-align: center;
@@ -457,13 +459,11 @@ strong{
     padding-bottom: 2rem;
     .all_options{
       display: none;
-      max-width: 80%;
+      max-width: 60%;
       align-items: center;
       justify-content: space-around;
       margin: auto;
       button{
-        padding: 0.5em;
-        font-size: 0.9em;
         font-weight: bold;
         width: 10em;
         text-align: center;
@@ -479,7 +479,7 @@ strong{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		max-width: 80%;
+		max-width: 60%;
 		margin: auto;
 		.imgcap{
 			max-width: 200px;
@@ -516,7 +516,7 @@ strong{
   padding-bottom: 5rem;
 
 	.smallIntro{
-		max-width: 80%;
+		max-width: 60%;
 		margin: auto;
 		font-size: 2rem;
 		padding: 5rem 0 2rem 0;
@@ -526,7 +526,7 @@ strong{
 
 	.largerIntro{
 		margin: auto;
-		max-width: 80%;
+		max-width: 60%;
 		font-size: 1rem;
 		padding: 1rem 0;
 		line-height: 2;
@@ -535,12 +535,12 @@ strong{
   
   .parabut{
     display: flex;
-    justify-content: space-around;
+	justify-content: space-around;
+	width: 60%;
+	margin: auto;
     button{
       margin-top: 1em ;
       margin-bottom: 1em ;
-      padding: 0.5em;
-      font-size: 0.9em;
       width: 10.5em;
       text-align: center;
       background-color: #d0e0c3;
@@ -554,7 +554,7 @@ strong{
   }
 
 	h4{
-		max-width: 80%;
+		max-width: 60%;
 		margin: auto;
 		font-size: 1.5rem;
 		text-align: left;
@@ -562,7 +562,7 @@ strong{
 	}
 	#graphs {
 		display: flex;
-		max-width: 80%;
+		max-width: 60%;
 		margin: auto;
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -596,7 +596,7 @@ strong{
 	background-color: #70a9a1;
 
 	.smallIntro{
-		max-width: 80%;
+		max-width: 60%;
 		margin: auto;
 		font-size: 1.3rem;
 		padding: 5rem 0 2rem 0;
@@ -606,7 +606,7 @@ strong{
 
 	.largerIntro{
 		margin: auto;
-		max-width: 80%;
+		max-width: 60%;
 		font-size: 1rem;
 		padding: 0rem 0 1.5rem 0;
 		line-height: 2;
@@ -614,7 +614,7 @@ strong{
 	}
 
 	h4{
-		max-width: 80%;
+		max-width: 60%;
 		margin: auto;
 		font-size: 1.5rem;
 		text-align: left;
@@ -623,7 +623,7 @@ strong{
 	}
 	#graphs {
 		display: flex;
-		max-width: 80%;
+		max-width: 60%;
 		margin: auto;
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -710,92 +710,13 @@ strong{
 			}
 		}
 
-		@media screen and (max-width: 769px) {
+@media screen and (max-width: 769px) {
 
-			.section{
-				padding: 0;
-			}
+	.section{
+		padding: 0;
+	}
 
-			.hero-wrapper{
-				padding: 0 !important;
-			}
-			.homewrapper
-			{
-				max-width:100%;
-				padding:0px;
-				margin:auto;
-				font-size: 1rem;
-				.introScreen{
-					height: 80vh;
-					// margin-top: 10em;
-					// .bgimg{
-					// }
-					h2{
-						font-size: 2em;
-					}
-					// p{
-					// }
-					// .crowdfundbtn{
-					// }
-				}
-				.introText{
-					max-width: 100%;
-
-					.smallIntro{
-						padding: 0.5em 0;
-					}
-
-					.largerIntro{
-						font-size: 1.3em;
-						padding: 0.5em 0;
-					}
-				}
-
-				.heading_main{
-					font-size: 1.3em;
-					padding: 1em 0 0.5em 0;
-				}
-
-				#homemainlinks{
-					display:flex;
-					flex-direction: column;
-
-					div{
-						width:100%;
-						margin: 0.2em 0;
-						background-color:#e3e3e3;
-						padding:1rem;
-					}
-				}
-				#homestat{
-					.tnctext{
-						font-size: 1rem;
-						margin-bottom: 0.5rem;
-					}
-					#graphs {
-						display: flex;
-						flex-direction: row;
-						flex-wrap: wrap;
-						// justify-content: center;
-						align-items: stretch;
-						.graphbox {
-							border-style: solid;
-							border-radius: 4px;
-							border-width: thin;
-							text-align: center;
-							vertical-align: middle;
-							height: 7em;
-							width: 7em;
-							margin: 0 0.5em 0.5em 0;
-							display: flex;
-							justify-content: center;
-							align-items: center;
-						}
-						.graphnumbers {
-							font-weight: bold;
-							font-size: 1.1em;
-						}
-					}
-				}
-			}
-		}
+	.hero-wrapper{
+		padding: 0 !important;
+	}
+}
