@@ -102,9 +102,13 @@ strong{
 	color: inherit;
 }
 
+#search_input_container{
+	background-color: #1f363d;
+}
+
 #vol_prompt {
 	text-align: center;
-	
+	padding-bottom: 4em;
 	color: #cfe0c3;
 	// background-color: #cfe0c3;
 	background-color: #1f363d;
@@ -112,6 +116,9 @@ strong{
 		font-weight: bold;
 		background-color: #cfe0c3;
 		color: #1f363d;
+		padding: 0.5em;
+		font-size: 1em;
+		width: 10em;
 	}
 }
 
