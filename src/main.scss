@@ -791,5 +791,18 @@ strong{
 		h4{
 			max-width: 100%;
 		}
+
+		#graphs {
+			max-width: 100%;
+		}
+
+		div{
+			.all_options{
+				flex-direction: column;
+				button{
+					margin: 0.5em;
+				}
+			}
+		}
 	}
 }
