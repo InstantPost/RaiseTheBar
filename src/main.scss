@@ -104,10 +104,17 @@ strong{
 
 #vol_prompt {
 	text-align: center;
+	
+	color: #cfe0c3;
+	// background-color: #cfe0c3;
+	background-color: #1f363d;
 	button {
 		font-weight: bold;
+		background-color: #cfe0c3;
+		color: #1f363d;
 	}
 }
+
 .filter-data-container {
 	border-radius: 0px;
 
@@ -690,12 +697,9 @@ strong{
 			padding: 0;
     }
     
-    .is-4{
-      color: #1f363d;
-      .has-text-grey {
-        color: inherit !important;
-      }
-    }
+	.has-text-grey {
+	color: #1f363d !important;
+	}
 
     .navbar-item{
       color: #1f363d;
@@ -749,5 +753,43 @@ strong{
 
 	.hero-wrapper{
 		padding: 0 !important;
+	}
+
+	.btn{
+		padding: 0.5em;
+		font-size: 1em;
+		width: 10em;
+	}
+
+	.introScreen{
+		max-width:100%;
+		padding: 1em;
+		h2{
+			font-size: 3rem;
+		}
+		p{
+			font-size: 2rem;
+		}
+		.bgimg{
+			filter: brightness(60%);
+		}
+	}
+
+	.introText, .bonum, .ourbit, #crowdfund{
+		padding: 1em;
+		*{
+			max-width: 100%;
+		}
+		.smallIntro{
+			font-size: 1.5rem;
+			max-width: 100%;
+		}
+		.largerIntro{
+			max-width: 100%;
+		}
+
+		h4{
+			max-width: 100%;
+		}
 	}
 }
