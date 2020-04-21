@@ -12,6 +12,9 @@ import { ViewImg } from "./ImgViewer";
 import { filter } from "./FilterData";
 import { search } from "./SearchBar";
 import { Authenticate } from "./Auth";
+
+var flagima=0;
+
 id("login_btn").addEventListener("click", () => {
   Authenticate("", {
     func: function() {
@@ -73,10 +76,48 @@ document.querySelector("body").addEventListener("click", event => {
     document.querySelector(`#${tab}`).classList += " active";
     document.querySelector(".burger").click();
   }
+
+  if(target.id=="imabtn")
+  {
+    if(flagima==0)
+    {
+      document.getElementsByClassName("all_options")[0].style.display="flex";
+      flagima=1;
+    }
+    else if(flagima==1)
+    {
+      document.getElementsByClassName("all_options")[0].style.display="none";
+      flagima=0;
+    }
+  }
+  if(target.id=="backtotop")
+  {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
 });
 
 
 document.querySelector("#homemainlinks").addEventListener("click", (event) => {
+  const tab = event.target.getAttribute("data-href");
+  console.log(tab)
+  if (!tab) return;
+  if (tab == "home") id("search_input_container").style.display = "none";
+  else id("search_input_container").style.display = "flex";
+  Array.from(cls("navbar-item")).forEach((el) => {
+    el.classList = "navbar-item is-white has-text-grey";
+  });
+  event.target.classList = "navbar-item is-white has-text-primary active-tab-link";
+  Array.from(cls("tab")).forEach((el) => {
+    el.classList.remove("active");
+  });
+  id("search_input").setAttribute("data-entity", tab);
+  document.querySelector(`#${tab}`).classList += " active";
+  document.querySelector(".burger").click();
+
+});
+
+document.querySelector("#allops").addEventListener("click", (event) => {
   const tab = event.target.getAttribute("data-href");
   console.log(tab)
   if (!tab) return;
@@ -108,5 +149,16 @@ document.querySelector("body").addEventListener("mouseover", event => {
   if (target.classList.contains("link")) {
     var text = event.target.innerText;
     target.setAttribute("title", text);
+  }
+});
+
+
+var mybutton=document.getElementById("backtotop");
+
+document.addEventListener("scroll", (event) => {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "flex";
+  } else {
+    mybutton.style.display = "none";
   }
 });
