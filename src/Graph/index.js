@@ -1,16 +1,6 @@
 export function Graph()
 {
-    const boxdata = [
-        {
-            name : "Startups",
-            number : 3,
-            color : "red"
-        },
-        {
-            name :"3D Printers",
-            number :5,
-            color :"#0BF"
-        },
+     const boxdata = [
         {
             name :"Individuals",
             number :"10",
@@ -33,12 +23,17 @@ export function Graph()
         },
         {
             name :"Face Shields Manufactured",
-            number :569,
+            number :1000,
             color :"#47F"
         },
         {
             name :"Shields Donated",
-            number :180,
+            number :532,
+            color :"#555"
+        },
+        {
+            name :"Shields Delivered",
+            number :45,
             color :"#555"
         }
     ]
