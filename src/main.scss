@@ -395,6 +395,12 @@ a.has-text-primary:hover, a.has-text-primary:focus {
     color: #cfe0c3;
 }
 
+.button.is-link {
+    background-color: #1f363d;
+    border-color: transparent;
+    color: #cfe0c3;
+}
+
 #backtotop{
 	font-size: 4rem;
 	position: fixed;
