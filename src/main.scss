@@ -375,6 +375,26 @@ strong{
 }
 // New Updates
 
+.active-tab-link{
+	color: #40798c !important;
+}
+
+a.has-text-primary:hover, a.has-text-primary:focus {
+    color: #40798c !important;
+}
+
+.button.is-link[disabled], fieldset[disabled] .button.is-link {
+    background-color: #1f363d;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.button.is-link:hover, .button.is-link.is-hovered {
+    background-color: #1f363d;
+    border-color: transparent;
+    color: #cfe0c3;
+}
+
 #backtotop{
 	font-size: 4rem;
 	position: fixed;
