@@ -11,7 +11,7 @@ export function Graph()
             number :"5 minutes",
             color :"#5A0"
         },
-        {
+         {
             name :"Man hours per day",
             number :150,
             color :"#A68"
@@ -33,7 +33,7 @@ export function Graph()
         },
         {
             name :"Shields Delivered",
-            number :45,
+            number :90,
             color :"#555"
         }
     ]
